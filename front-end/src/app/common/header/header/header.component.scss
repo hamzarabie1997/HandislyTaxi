@@ -1,0 +1,19 @@
+@import './../../../../assets/variables.scss';
+.header-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $header-height;
+    color: $header-menu-color;
+    font-size: 28px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: $white;
+}
+
+.header-menu {
+    background-color: $header-menu-color;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: $text-white;
+}
