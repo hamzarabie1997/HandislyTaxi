@@ -1,3 +1,4 @@
+import { HomeModule } from './home/home/home.module';
 import { HeaderModule } from './common/header/header/header.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -12,7 +13,9 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    HeaderModule
+    HeaderModule, 
+    HomeModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
