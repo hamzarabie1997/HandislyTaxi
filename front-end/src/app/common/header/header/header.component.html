@@ -2,5 +2,7 @@
         Handisly Taxi
 </div>
 <div class="header-menu">
-    <div> Home</div>
+    <div *ngFor="let item of menuItems" [ngClass]="{'currentPage': item === currentSelection }">
+        {{item}}
+    </div>
 </div>
