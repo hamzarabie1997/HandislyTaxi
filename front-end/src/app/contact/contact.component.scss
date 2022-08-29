@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.greetings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box {
+  margin-bottom: 10px;
+  width: calc(100% / 2 - 10px);
+}
+
+form .user-details .special-css {
+  margin-bottom: 15px;
+  width: calc(100% - 10px);
+}
+
+.user-details .input-box input {
+  border: 0;
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  padding-left: 15px;
+  border-bottom: 1px solid green;
+}
+
+.user-details .special-css input {
+  border: 0;
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border-bottom: 1px solid green;
+}
+
+.user-details .input-box input:hover {
+  border: 1px solid green;
+}
+
+.user-details .special-css input:hover {
+  border: 1px solid green;
+}
+
+::placeholder {
+  color: rgb(44, 129, 44);
+}
+
+.button input {
+  border: 0;
+  color: white;
+  background-color: green;
+  height: 45px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+}
+
+.button input:hover {
+  background: linear-gradient(20deg, #ffffff, #ffffff);
+}
