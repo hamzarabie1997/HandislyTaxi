@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -19,10 +20,18 @@ export class HeaderComponent implements OnInit {
     'Book Online',
     'Plans and Pricing'
   ];
-   
-  constructor() { }
+   menuPaths = [
+    '',
+    'services'
+   ]
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  navigateTo(index: string) {
+    this.router.navigate([this.menuPaths[index]]);
+    this.currentSelection = this.menuItems[index];
   }
 
 }

@@ -22,7 +22,16 @@
     div {
         padding-right: 30px;
     }
+
     .currentPage {
         text-decoration: underline;
+    }
+
+    .header-option {
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.5;
+        }
     }
 }
