@@ -1,2 +1,28 @@
-@import './../../../assets/variables.scss';
+@import "./../../../assets/variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
 
+.greetings {
+  display: inline-block;
+  margin: 25px;
+}
+
+.text-1 {
+  font-size: 50px;
+  width: 0;
+  min-width: 100%;
+  margin: 35px;
+  font-family: "Lato", sans-serif;
+  color: #1c5f4e;
+}
+
+.texts {
+  margin: 35px;
+  color: #1c5f4e;
+  font-family: "Lato", sans-serif;
+}
