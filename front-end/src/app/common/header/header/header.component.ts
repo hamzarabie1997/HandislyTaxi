@@ -4,11 +4,10 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-
-  @Input() currentSelection : string;
+  @Input() currentSelection: string;
   menuItems = [
     'Home',
     'Our Services',
@@ -18,20 +17,15 @@ export class HeaderComponent implements OnInit {
     'About',
     'FAQ',
     'Book Online',
-    'Plans and Pricing'
+    'Plans and Pricing',
   ];
-   menuPaths = [
-    '',
-    'services'
-   ]
-  constructor(private router: Router) { }
+  menuPaths = ['home', 'services', 'contact'];
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   navigateTo(index: string) {
     this.router.navigate([this.menuPaths[index]]);
     this.currentSelection = this.menuItems[index];
   }
-
 }
