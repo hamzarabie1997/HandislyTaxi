@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
     'Book Online',
     'Plans and Pricing',
   ];
-  menuPaths = ['home', 'services', 'contact'];
+  menuPaths = ['', 'services', 'contact'];
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
