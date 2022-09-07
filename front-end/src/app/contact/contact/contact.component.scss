@@ -2,11 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 .container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   height: 60vh;
-  width: 100%;
 }
 
 /*<----------------- Left Part Styling ---------------->*/
@@ -33,15 +31,14 @@
 /*<-------------   Form Styling  ------------------->*/
 
 .form {
-
+  width: calc(100% / 3);
 }
-
 .inputs {
   display: grid;
   grid-template-columns: auto auto;
-  column-gap: 20px;
-  row-gap: 20px;
-  margin-bottom: 20px;
+  column-gap: 15px;
+  row-gap: 10px;
+  margin-bottom: 10px;
 }
 
 .inputs .input-box input {
@@ -60,7 +57,6 @@
   outline: none;
   font-size: 16px;
   margin-bottom: 10px;
-  border-radius: 5px;
   border-bottom: 1px solid #2a7c6f;
 }
 
@@ -70,7 +66,6 @@ textarea {
   width: 100%;
   outline: none;
   font-size: 16px;
-  border-radius: 5px;
   border-bottom: 1px solid #2a7c6f;
   resize: none;
 }
@@ -82,11 +77,27 @@ textarea {
   color: white;
   background-color: #2a7c6f;
   font-size: 16px;
-  border-radius: 5px;
   margin-top: 40px;
+  font-family: "Lato", sans-serif;
 }
 
 ::placeholder {
   color: #2a7c6f;
   font-family: "Lato", sans-serif;
+}
+
+.form .input-box input:hover {
+  border: 1px solid #2a7c6f;
+}
+
+.form .special-css input:hover {
+  border: 1px solid #2a7c6f;
+}
+
+textarea:hover {
+  border: 1px solid #2a7c6f;
+}
+
+.button input:hover {
+  background: linear-gradient(to right, #b6c4b7, #b6c4b7);
 }
