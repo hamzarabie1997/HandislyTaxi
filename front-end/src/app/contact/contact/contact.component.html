@@ -4,11 +4,11 @@
       WE WANT TO HEAR <br />
       FROM YOU!
     </div>
-    <div class="info">
-      500 Terry Francois Street, 6th Floor. San Francisco, CA 94158
+    <div class="info-container">
+      <div>500 Terry Francois Street, 6th Floor. San Francisco, CA 94158</div>
+      <div>info@mysite.com</div>
+      <div>123-456-7890</div>
     </div>
-    <div class="info">info@mysite.com</div>
-    <div class="info">123-456-7890</div>
   </div>
 
   <div class="form">
@@ -24,7 +24,7 @@
         </div>
 
         <div class="input-box">
-          <input
+          <input 
             type="email"
             placeholder="Email"
             formControlName="email"
@@ -33,7 +33,7 @@
         </div>
 
         <div class="input-box">
-          <input
+          <input 
             type="text"
             placeholder="Phone"
             formControlName="phone"
@@ -50,13 +50,14 @@
         <input type="text" placeholder="Subject" formControlName="subject" />
       </div>
 
-      <textarea
+      <div class="text-message"><textarea
         placeholder="Type your message here.."
         formControlName="message"
-      ></textarea>
+      ></textarea></div>
+      
 
       <div class="button">
-        <input type="submit" value="Submit" />
+    <button>Submit</button>
       </div>
     </form>
   </div>
