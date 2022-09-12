@@ -5,9 +5,11 @@
       FROM YOU!
     </div>
     <div class="info-container">
-      <div>500 Terry Francois Street, 6th Floor. San Francisco, CA 94158</div>
-      <div>info@mysite.com</div>
-      <div>123-456-7890</div>
+      <div>
+        <p>500 Terry Francois Street, 6th Floor. San Francisco, CA 94158</p>
+      </div>
+      <div><p>info@mysite.com</p></div>
+      <div><p>123-456-789</p></div>
     </div>
   </div>
 
@@ -18,27 +20,44 @@
           <input
             type="text"
             placeholder="Name"
+            class="form-control"
             formControlName="name"
-            required
           />
+          <span
+            class="text-danger"
+            *ngIf="
+              (Form.name.touched || submitted) && Form.name.errors?.required
+            "
+          >
+            Name is required
+          </span>
         </div>
 
         <div class="input-box">
-          <input 
+          <input
             type="email"
             placeholder="Email"
+            class="form-control"
             formControlName="email"
-            required
           />
+          <span
+            class="text-danger"
+            *ngIf="
+              (Form.email.touched || submitted) && Form.email.errors?.required
+            "
+          >
+            Email is required
+          </span>
+          <span
+            class="text-danger"
+            *ngIf="Form.email.touched && Form.email.errors?.email"
+          >
+            Enter a valid email address
+          </span>
         </div>
 
         <div class="input-box">
-          <input 
-            type="text"
-            placeholder="Phone"
-            formControlName="phone"
-            required
-          />
+          <input type="text" placeholder="Phone" formControlName="phone" />
         </div>
 
         <div class="input-box">
@@ -50,14 +69,15 @@
         <input type="text" placeholder="Subject" formControlName="subject" />
       </div>
 
-      <div class="text-message"><textarea
-        placeholder="Type your message here.."
-        formControlName="message"
-      ></textarea></div>
-      
+      <div class="text-message">
+        <textarea
+          placeholder="Type your message here.."
+          formControlName="message"
+        ></textarea>
+      </div>
 
       <div class="button">
-    <button>Submit</button>
+        <button>Submit</button>
       </div>
     </form>
   </div>

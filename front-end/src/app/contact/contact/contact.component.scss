@@ -4,24 +4,30 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  margin-top: 40px;
+  margin-top: 100px;
+  width: 1265px;
+  height: 921.695px;
 }
 
 /*<----------------- Left Part Styling ---------------->*/
 
 .welcome-message {
   font-size: 40px;
-  margin: 35px;
   font-family: "Lato", sans-serif;
   color: $text-color;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  margin-right: 30px;
 }
 
 .info-container {
   color: #1c5f4e;
   font-family: "Lato", sans-serif;
+  justify-content: space-around;
   div {
-    margin: 35px;
+    width: 460px;
+    height: 28.13px;
+    margin-bottom: 20px;
   }
 }
 
@@ -33,7 +39,6 @@
 
 /*<-------------   Form Styling  ------------------->*/
 .form {
-  padding-top: 60px;
 }
 .inputs {
   display: grid;
@@ -131,3 +136,4 @@ textarea:hover {
 .button button:hover {
   background: linear-gradient(to right, #b6c4b7, #b6c4b7);
 }
+
