@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @Input() currentSelection: string;
+  @Input() currentSelection: string = 'Home';
   menuItems = [
     'Home',
     'Our Services',
@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  navigateTo(index: string) {
+  navigateTo(index: number) {
     this.router.navigate([this.menuPaths[index]]);
     this.currentSelection = this.menuItems[index];
   }

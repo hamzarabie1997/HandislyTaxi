@@ -1,22 +1,31 @@
-import { ContactModule } from './contact/contact/contact.module';
-import { ServicesModule } from './../services/services.module';
-import { HomeModule } from './home/home/home.module';
-import { HeaderModule } from './common/header/header/header.module';
-import { BrowserModule } from '@angular/platform-browser';
+import { ContactModule } from './contact/contact.module';
+import { ServicesModule } from './services/services.module';
+import { HeaderModule } from './common/header/header.module';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatInputModule,
     HeaderModule,
-    HomeModule,
-    ContactModule,
     ServicesModule,
+    ContactModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
