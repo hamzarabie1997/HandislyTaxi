@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
@@ -18,15 +19,16 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule, 
-    FormsModule, 
-    ReactiveFormsModule, 
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
-    BrowserAnimationsModule, 
-    MatInputModule, 
-    HeaderModule, 
-    ServicesModule, 
-    ContactModule
+    BrowserAnimationsModule,
+    MatInputModule,
+    HeaderModule,
+    ServicesModule,
+    ContactModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -31,16 +31,17 @@
                 </div>
             </div>
 
-            <div class="special-css">
-                <input type="text" placeholder="Subject" formControlName="subject" />
-            </div>
+            <mat-form-field class="special-css">
+                <input matInput type="text" placeholder="Subject" formControlName="subject" />
+            </mat-form-field>
 
-            <div class="text-message"><textarea placeholder="Type your message here.."
-                    formControlName="message"></textarea></div>
+            <div class="text-message">
+                <textarea matInput placeholder="Type your message here.." formControlName="message"></textarea>
+            </div>
 
 
             <div class="button">
-                <button>Submit</button>
+                <button mat-button>Submit</button>
             </div>
         </form>
     </div>
