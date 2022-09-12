@@ -1,0 +1,9 @@
+<div class="header-title">
+    Handisly Taxi
+</div>
+<div class="header-menu">
+    <div *ngFor="let item of menuItems; let i = index;" [ngClass]="{'currentPage': item === currentSelection }"
+        class="header-option" (click)="navigateTo(i)">
+        {{item}}
+    </div>
+</div>

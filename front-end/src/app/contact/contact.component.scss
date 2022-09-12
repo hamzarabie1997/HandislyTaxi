@@ -1,77 +1,133 @@
+@import "./../../assets/variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 .container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  margin-top: 40px;
 }
 
-.greetings {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+/*<----------------- Left Part Styling ---------------->*/
+
+.welcome-message {
+  font-size: 40px;
+  margin: 35px;
+  font-family: "Lato", sans-serif;
+  color: $text-color;
 }
 
-.user-details {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 20px 0 12px 0;
+.info-container {
+  color: #1c5f4e;
+  font-family: "Lato", sans-serif;
+  div {
+    margin: 35px;
+  }
 }
 
-form .user-details .input-box {
+.greetings,
+.form {
+  height: 411.5px;
+  width: 460px;
+}
+
+/*<-------------   Form Styling  ------------------->*/
+.form {
+  padding-top: 60px;
+}
+.inputs {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 10px;
+}
+
+.input-box {
+  height: 42px;
+  width: 225px;
   margin-bottom: 10px;
-  width: calc(100% / 2 - 10px);
 }
 
-form .user-details .special-css {
-  margin-bottom: 15px;
-  width: calc(100% - 10px);
-}
-
-.user-details .input-box input {
-  border: 0;
-  height: 45px;
-  width: 100%;
+.inputs .input-box input {
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid $text-color;
+  padding: 3px 3px 3px 12px;
+  height: 34px;
+  width: 208px;
   outline: none;
   font-size: 16px;
-  padding-left: 15px;
-  border-bottom: 1px solid green;
 }
 
-.user-details .special-css input {
-  border: 0;
-  height: 45px;
-  width: 100%;
+.special-css {
+  width: 460px;
+  height: 42px;
+  margin-bottom: 10px;
+}
+
+.special-css input {
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid $text-color;
+  padding: 3px 3px 3px 12px;
+  height: 35px;
+  width: 445px;
   outline: none;
   font-size: 16px;
-  border-radius: 5px;
-  padding-left: 15px;
-  border-bottom: 1px solid green;
 }
 
-.user-details .input-box input:hover {
-  border: 1px solid green;
+.text-message {
+  width: 460px;
+  height: 127px;
+  margin-bottom: 37px;
+}
+textarea {
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid $text-color;
+  height: 110.75px;
+  width: 434px;
+  outline: none;
+  padding: 11.25px 10px 3px 16px;
+  font-size: 16px;
+  resize: none;
 }
 
-.user-details .special-css input:hover {
-  border: 1px solid green;
+.button {
+  width: 460px;
+  height: 50px;
+  margin-bottom: 11px;
+}
+
+.button button {
+  width: 460px;
+  height: 50px;
+  border: 0;
+  color: white;
+  background-color: $text-color;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
 }
 
 ::placeholder {
-  color: rgb(44, 129, 44);
+  color: $text-color;
+  font-family: "Lato", sans-serif;
 }
 
-.button input {
-  border: 0;
-  color: white;
-  background-color: green;
-  height: 45px;
-  width: 100%;
-  font-size: 16px;
-  border-radius: 5px;
-  padding-left: 15px;
+.inputs .input-box input:hover {
+  border: 1px solid $text-color;
 }
 
-.button input:hover {
-  background: linear-gradient(20deg, #ffffff, #ffffff);
+.special-css input:hover {
+  border: 1px solid $text-color;
+}
+
+textarea:hover {
+  border: 1px solid $text-color;
+}
+
+.button button:hover {
+  background: linear-gradient(to right, #b6c4b7, #b6c4b7);
 }
