@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
+
 
 @Component({
   selector: 'app-contact',
@@ -7,19 +12,26 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
-  myForm = new FormGroup({
-    name: new FormControl(null),
-    email: new FormControl(null),
-    phone: new FormControl(null),
-    address: new FormControl(null),
-    subject: new FormControl(null),
-    message: new FormControl(null),
-  });
+  myForm: FormGroup;
+  submitted = false;
+
+  
 
   ngOnInit(): void {
-
+    this.myForm = new FormGroup({
+      name: new FormControl(''),
+      email: new FormControl(''),
+      phone: new FormControl(''),
+      address: new FormControl(''),
+      subject: new FormControl(''),
+      message: new FormControl(''),
+    });
+  }
+  get Form() {
+    return this.myForm.controls;
   }
   onSubmit() {
+    this.submitted = true;
     console.log('This button works!!!');
   }
 }

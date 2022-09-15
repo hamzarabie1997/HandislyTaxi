@@ -14,71 +14,40 @@
   </div>
 
   <div class="form">
-    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-      <div class="inputs">
-        <div class="input-box">
-          <input
-            type="text"
-            placeholder="Name"
-            class="form-control"
-            formControlName="name"
-          />
-          <span
-            class="text-danger"
-            *ngIf="
-              (Form.name.touched || submitted) && Form.name.errors?.required
-            "
-          >
-            Name is required
-          </span>
+    <div class="form-container">
+      <form [formGroup]="myForm">
+          <mat-form-field class="form-field" appearance="fill">
+            <mat-label> Name </mat-label>
+            <input matInput formControlName="name" required />
+          </mat-form-field>
+
+          <mat-form-field class="form-field" appearance="fill">
+            <mat-label> E-mail </mat-label>
+            <input matInput formControlName="email" required />
+          </mat-form-field>
+
+          <mat-form-field class="form-field" appearance="fill">
+            <mat-label> Address </mat-label>
+            <input matInput formControlName="address" />
+          </mat-form-field>
+
+          <mat-form-field class="form-field" appearance="fill">
+            <mat-label> Phone </mat-label>
+            <input matInput formControlName="phone" />
+          </mat-form-field>
+
+          <mat-form-field class="form-field" appearance="fill">
+            <mat-label> Subject </mat-label>
+            <input matInput formControlName="subject" />
+          </mat-form-field>
+
+        <div class="button">
+          <button mat-raised-button color="primary" type="submit">
+            Submit
+          </button>
         </div>
 
-        <div class="input-box">
-          <input
-            type="email"
-            placeholder="Email"
-            class="form-control"
-            formControlName="email"
-          />
-          <span
-            class="text-danger"
-            *ngIf="
-              (Form.email.touched || submitted) && Form.email.errors?.required
-            "
-          >
-            Email is required
-          </span>
-          <span
-            class="text-danger"
-            *ngIf="Form.email.touched && Form.email.errors?.email"
-          >
-            Enter a valid email address
-          </span>
-        </div>
-
-        <div class="input-box">
-          <input type="text" placeholder="Phone" formControlName="phone" />
-        </div>
-
-        <div class="input-box">
-          <input type="text" placeholder="Address" formControlName="address" />
-        </div>
-      </div>
-
-      <div class="special-css">
-        <input type="text" placeholder="Subject" formControlName="subject" />
-      </div>
-
-      <div class="text-message">
-        <textarea
-          placeholder="Type your message here.."
-          formControlName="message"
-        ></textarea>
-      </div>
-
-      <div class="button">
-        <button>Submit</button>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
 </div>

@@ -1,51 +1,45 @@
-@import "./../../../assets/variables.scss";
+@import "./../../assets/variables.scss";
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 .container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
   margin-top: 100px;
-  width: 1265px;
-  height: 921.695px;
 }
 
 /*<----------------- Left Part Styling ---------------->*/
 
+.greetings {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 .welcome-message {
   font-size: 40px;
+  line-height: 40px;
   font-family: "Lato", sans-serif;
   color: $text-color;
-  justify-content: space-around;
-  margin-bottom: 20px;
-  margin-right: 30px;
 }
 
 .info-container {
   color: #1c5f4e;
   font-family: "Lato", sans-serif;
-  justify-content: space-around;
-  div {
-    width: 460px;
-    height: 28.13px;
-    margin-bottom: 20px;
-  }
-}
-
-.greetings,
-.form {
-  height: 411.5px;
-  width: 460px;
+  justify-content: space-evenly;
 }
 
 /*<-------------   Form Styling  ------------------->*/
+
 .form {
-}
-.inputs {
-  display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: calc(100% / 3);
 }
 
+.form-field {
+  margin: 5px;
+}
+/*
 .input-box {
   height: 42px;
   width: 225px;
@@ -137,3 +131,4 @@ textarea:hover {
   background: linear-gradient(to right, #b6c4b7, #b6c4b7);
 }
 
+*/
