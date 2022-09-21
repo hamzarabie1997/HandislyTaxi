@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactService } from '../contact.service';
+import { ContactService } from './contact.service';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
@@ -9,14 +9,14 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-  myForm: FormGroup;
-
-  name = new FormControl('');
-  email = new FormControl('');
-  phone = new FormControl('');
-  address = new FormControl('');
-  subject = new FormControl('');
-  message = new FormControl('');
+  myForm =new FormGroup({
+  name : new FormControl(''),
+  email : new FormControl(''),
+  phone : new FormControl(''),
+  address : new FormControl(''),
+  subject : new FormControl(''),
+  message : new FormControl(''),
+  });
 
   
 
@@ -31,12 +31,12 @@ export class ContactComponent implements OnInit {
 
   register() {
     let user = {
-      u_name: this.name,
-      u_email: this.email,
-      u_phone: this.phone,
-      u_address: this.address,
-      u_subject: this.subject,
-      u_message: this.message,
+      u_name: this.myForm['name'].value,
+      u_email: this.myForm['email'].value,
+      u_phone: this.myForm['phone'].value,
+      u_address: this.myForm['address'].value,
+      u_subject: this.myForm['subject'].value,
+      u_message: this.myForm['message'].value,
     };
 
     this.http.sendEmail('http://localhost:3000/contact', user).subscribe(
