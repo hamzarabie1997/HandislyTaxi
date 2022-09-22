@@ -6,6 +6,7 @@ const nodemailer = require("nodemailer");
 const details = require("./details.json");
 
 const app = express();
+
 app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
 
@@ -14,10 +15,10 @@ app.listen(3000, () => {
 });
 
 app.get("/", (req, res) => {
-  res.send();
+  res.send("Hello");
 });
 
-app.post("/sendmail", (req, res) => {
+app.post("/backend", (req, res) => {
   console.log("request came");
   let user = req.body;
   sendMail(user, (info) => {
