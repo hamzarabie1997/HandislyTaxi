@@ -31,15 +31,23 @@ async function sendMail(user, callback) {
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
-    secure: false, // true for 465, false for other ports
+    secure: false,
+    auth: {
+      user: "hamza.rabie1997@gmail.com",
+      pass: "jzbtsmotbgxsuuid",
+    },
   });
 
   let mailOptions = {
     from: "TaxiApp", // sender address
-    to: user.email, // list of receivers
-    subject: "Welcome", // Subject line
-    html: `<h1>Hi ${user.name}</h1><br>
-    <h4>Thanks for joining us</h4>`,
+    to: "hamza.rabie1997@gmail.com", // list of receivers
+    subject: "New Issue", // Subject line
+    html: `<p><b>Name:</b> ${user.u_name}</p>
+    <p><b>Email:</b> ${user.u_email}</p>
+    <p><b>Phone:</b> ${user.u_phone}</p>
+    <p><b>Address:</b> ${user.u_address}</p>
+    <p><b>Subject:</b> ${user.u_subject}</p>
+    <p><b>Message:</b> ${user.u_message}</p>`,
   };
 
   // send mail with defined transport object
