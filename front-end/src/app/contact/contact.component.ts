@@ -34,7 +34,6 @@ export class ContactComponent implements OnInit {
       u_subject: this.myForm.value.subject,
       u_message: this.myForm.value.message,
     };
-    console.log(user);
     this.http.sendEmail('http://localhost:3000/backend', user).subscribe({
       next: (data) => {
         let res: any = data;

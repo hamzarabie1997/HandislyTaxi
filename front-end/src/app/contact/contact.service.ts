@@ -19,4 +19,6 @@ export class ContactService {
   sendEmail(url, data) {
     return this.http.post(url, data);
   }
+
+  save
 }

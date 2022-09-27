@@ -3,7 +3,16 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 
-const details = require("./details.json");
+var AWS = require("aws-sdk");
+let awsConfig = {
+  region: "us-east-1",
+  endpoint: "http://dynamodb.us-east-1.amazonaws.com",
+  accessKeyId: "AKIAVLKH2DQYSEJIBHXU",
+  secretAccessKey: "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",
+};
+AWS.config.update(awsConfig);
+
+let docClient = new AWS.DynamoDB.DocumentClient();
 
 const app = express();
 
@@ -53,7 +62,31 @@ async function sendMail(user, callback) {
   // send mail with defined transport object
   let info = await transporter.sendMail(mailOptions);
 
+  let save = function () {
+
+    var input = {
+      email: user.u_email,
+      address: user.u_address,
+      message: user.u_message,
+      name: user.u_name,
+      phone: user.u_phone,
+      subject: user.u_subject,
+    };
+
+    var params = {
+      TableName: "Issues",
+      Item: input,
+    };
+    docClient.put(params, function (err, data) {
+      if (err) {
+        console.log("Issues::save::error - " + JSON.stringify(err, null, 2));
+      } else {
+        console.log("Issues::save::success");
+      }
+    });
+  };
+
+  save();
+
   callback(info);
 }
-
-// main().catch(console.error);
