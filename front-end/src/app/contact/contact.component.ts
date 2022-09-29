@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactService } from './contact.service';
-import { FormControl, FormGroup, Validators} from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -9,9 +9,19 @@ import { FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
   myForm = new FormGroup({
-    name: new FormControl('', Validators.required),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    phone: new FormControl(''),
+    name: new FormControl('', [
+      Validators.required,
+      Validators.pattern('[a-zA-Z]*'),
+    ]),
+    email: new FormControl('', [
+      Validators.required,
+      Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
+    ]),
+    phone: new FormControl('', [
+      Validators.required,
+      Validators.pattern('^[0-9]*$'),
+      Validators.minLength(8),
+    ]),
     address: new FormControl(''),
     subject: new FormControl(''),
     message: new FormControl('', Validators.required),
@@ -34,6 +44,7 @@ export class ContactComponent implements OnInit {
       u_subject: this.myForm.value.subject,
       u_message: this.myForm.value.message,
     };
+    
     this.http.sendEmail('http://localhost:3000/backend', user).subscribe({
       next: (data) => {
         let res: any = data;
