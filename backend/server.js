@@ -10,9 +10,8 @@ let awsConfig = {
   accessKeyId: "AKIAVLKH2DQYSEJIBHXU",
   secretAccessKey: "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",
 };
-AWS.config.update(awsConfig);
 
-let docClient = new AWS.DynamoDB.DocumentClient();
+var dynamodb = new AWS.DynamoDB(awsConfig);
 
 const app = express();
 
@@ -34,6 +33,7 @@ app.post("/backend", (req, res) => {
     res.send(info);
   });
 });
+
 
 async function sendMail(user, callback) {
   // create reusable transporter object using the default SMTP transport
@@ -63,7 +63,6 @@ async function sendMail(user, callback) {
   let info = await transporter.sendMail(mailOptions);
 
   let save = function () {
-
     var input = {
       email: user.u_email,
       address: user.u_address,
@@ -77,15 +76,27 @@ async function sendMail(user, callback) {
       TableName: "Issues",
       Item: input,
     };
-    docClient.put(params, function (err, data) {
+
+    dynamodb.getItem(params, function (err, data) {
       if (err) {
-        console.log("Issues::save::error - " + JSON.stringify(err, null, 2));
-      } else {
-        console.log("Issues::save::success");
-      }
+        console.log(err, err.stack);
+      } // an error occurred
+      else {
+        if (data.email === "") {
+          dynamodb.put(params, function (err, data) {
+            if (err) {
+              console.log(
+                "Issues::save::error - " + JSON.stringify(err, null, 2)
+              );
+            } else {
+              console.log("Issues::save::success");
+            }
+            
+          });
+        }
+      } // successful response
     });
   };
-
   save();
 
   callback(info);

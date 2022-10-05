@@ -1,7 +1,7 @@
 <div class="container">
   <div class="greetings">
     <div class="welcome-message">
-      WE WANT TO HEAR <br/>
+      WE WANT TO HEAR <br />
       FROM YOU!
     </div>
     <div class="info-container">
@@ -15,15 +15,20 @@
 
   <div class="form">
     <form [formGroup]="myForm">
-      
       <mat-form-field class="form-field" appearance="fill">
         <mat-label> Name </mat-label>
-        <input matInput formControlName="name"/>
+        <input matInput formControlName="name" />
+        <mat-error *ngIf="myForm.controls.name.value === ''"
+          >Can't be empty</mat-error
+        >
       </mat-form-field>
 
       <mat-form-field class="form-field" appearance="fill">
         <mat-label> E-mail </mat-label>
-        <input matInput formControlName="email"/>
+        <input matInput formControlName="email" />
+        <mat-error *ngIf="myForm.controls.email.status === 'INVALID'"
+          >Wrong Form</mat-error
+        >
       </mat-form-field>
 
       <mat-form-field class="form-field" appearance="fill">
@@ -33,7 +38,7 @@
 
       <mat-form-field class="form-field" appearance="fill">
         <mat-label> Phone </mat-label>
-        <input matInput formControlName="phone" />
+        <input matInput formControlName="phone"  (keydown)="phoneHandler($event)" type="number">
       </mat-form-field>
 
       <mat-form-field class="form-field" appearance="fill">
@@ -46,12 +51,16 @@
         <textarea matInput formControlName="message"></textarea>
       </mat-form-field>
 
-      
-
       <div class="button">
-        <button mat-raised-button color="primary" type="submit" (click)="register()" [disabled]="!myForm.valid">Submit</button>
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          (click)="register()"
+        >
+          Submit
+        </button>
       </div>
-
     </form>
   </div>
 </div>
