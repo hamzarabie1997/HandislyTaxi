@@ -34,7 +34,6 @@ app.post("/backend", (req, res) => {
   });
 });
 
-
 async function sendMail(user, callback) {
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
@@ -48,9 +47,9 @@ async function sendMail(user, callback) {
   });
 
   let mailOptions = {
-    from: "TaxiApp", // sender address
-    to: "hamza.rabie1997@gmail.com", // list of receivers
-    subject: "New Issue", // Subject line
+    from: "TaxiApp",
+    to: "hamza.rabie1997@gmail.com",
+    subject: "New Issue",
     html: `<p><b>Name:</b> ${user.u_name}</p>
     <p><b>Email:</b> ${user.u_email}</p>
     <p><b>Phone:</b> ${user.u_phone}</p>
@@ -68,22 +67,35 @@ async function sendMail(user, callback) {
       address: user.u_address,
       message: user.u_message,
       name: user.u_name,
-      phone: user.u_phone,
+      phone: toString(user.u_phone),
       subject: user.u_subject,
     };
 
     var params = {
       TableName: "Issues",
-      Item: input,
+      Key: {
+        email: { S: input.email },
+      },
+    };
+
+    var params2 = {
+      TableName: "Issues",
+      Item: {
+        email: { S: input.email },
+        address: { S: input.address },
+        message: { S: input.message },
+        name: { S: input.name },
+        phone: {S: input.phone },
+        subject: { S: input.subject },
+      },
     };
 
     dynamodb.getItem(params, function (err, data) {
       if (err) {
         console.log(err, err.stack);
-      } // an error occurred
-      else {
-        if (data.email === "") {
-          dynamodb.put(params, function (err, data) {
+      } else {
+        if (Object.keys(data).length === 0) {
+          dynamodb.putItem(params2, function (err, data) {
             if (err) {
               console.log(
                 "Issues::save::error - " + JSON.stringify(err, null, 2)
@@ -91,13 +103,12 @@ async function sendMail(user, callback) {
             } else {
               console.log("Issues::save::success");
             }
-            
           });
         }
-      } // successful response
+      }
     });
   };
-  save();
 
+  save();
   callback(info);
 }
