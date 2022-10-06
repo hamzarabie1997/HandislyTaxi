@@ -94,6 +94,7 @@ async function sendMail(user, callback) {
       if (err) {
         console.log(err, err.stack);
       } else {
+        console.log(data);
         if (Object.keys(data).length === 0) {
           dynamodb.putItem(params2, function (err, data) {
             if (err) {
