@@ -1,3 +1,41 @@
-<div class="welcome-banner">
-    <div class="title">Welcome to Our Site</div>
+<div class="container">
+  <!------------------------------- Welcome Banner ------------------------->
+  <div class="welcome-banner">
+    <div class="welcome-content">
+      <div class="title">
+        Welcome <br />
+        to Our Site
+      </div>
+      <div class="right-side">
+        <div class="text-1">
+          Welcome to Handisly Taxi. We provide a wide selection of <br />
+          services
+        </div>
+        <hr />
+        <div class="button">
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------------------------------- White Space ------------------------->
+  <div class="space"></div>
+  <!------------------------------- SlideShow ------------------------->
+  <div class="slide-show">
+    <h1>Angular 10 Material Carousel Slider</h1>
+
+    <mat-carousel
+      timings="200ms ease-in"
+      [autoplay]="true"
+      interval="6000"
+      color="white"
+    >
+      <mat-carousel-slide
+        *ngFor="let slide of slides; let i = index"
+        [image]="slide.image"
+        overlayColor="#ffffff"
+        [hideOverlay]="false"
+      ></mat-carousel-slide>
+    </mat-carousel>
+  </div>
 </div>
