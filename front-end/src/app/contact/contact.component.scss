@@ -2,17 +2,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 .container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 100px;
 }
 
 /*<----------------- Left Part Styling ---------------->*/
 
+.greetings {
+  display: flex;
+  flex-direction: column;
+}
 .welcome-message {
   font-size: 40px;
-  margin: 35px;
+  line-height: 40px;
   font-family: "Lato", sans-serif;
   color: $text-color;
 }
@@ -20,27 +23,26 @@
 .info-container {
   color: #1c5f4e;
   font-family: "Lato", sans-serif;
-  div {
-    margin: 35px;
-  }
-}
-
-.greetings,
-.form {
-  height: 411.5px;
-  width: 460px;
+  justify-content: space-evenly;
 }
 
 /*<-------------   Form Styling  ------------------->*/
+
 .form {
-  padding-top: 60px;
-}
-.inputs {
-  display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 10px;
+  display: flex;
+  align-items: center;
+  width: calc(100% / 3);
 }
 
+.form-field {
+  margin-right: 5px;
+}
+
+.mat-raised-button {
+  background-color: #1c5f4e;
+  width: 100%;
+}
+/*
 .input-box {
   height: 42px;
   width: 225px;
@@ -131,3 +133,5 @@ textarea:hover {
 .button button:hover {
   background: linear-gradient(to right, #b6c4b7, #b6c4b7);
 }
+
+*/

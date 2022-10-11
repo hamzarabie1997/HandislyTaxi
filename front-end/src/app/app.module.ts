@@ -11,12 +11,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent
-  ],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -29,8 +27,9 @@ import { HomeComponent } from './home/home.component';
     ServicesModule,
     ContactModule,
     MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
