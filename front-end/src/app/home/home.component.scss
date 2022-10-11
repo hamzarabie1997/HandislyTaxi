@@ -66,3 +66,23 @@ a:hover {
 }
 
 // ************* Slide Show **************** //
+
+// ************* Paragraph Part **************** //
+h1 {
+  color: $banner-green;
+  line-height: 72px;
+  text-align: center;
+  font-size: 72px;
+  font-family: "Lato", sans-serif;
+}
+
+.part-2{
+  margin-top: 40px;
+}
+p {
+  color: $banner-green;
+  line-height: 15px;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+}

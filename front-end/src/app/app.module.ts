@@ -11,9 +11,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { HomeComponent } from './home/home.component';
-import {
-  MatCarouselModule,
-} from '@ngbmodule/material-carousel';
+// import {
+//   MatCarouselModule,
+// } from '@ngbmodule/material-carousel';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -29,7 +29,7 @@ import {
     ServicesModule,
     ContactModule,
     MatButtonModule,
-    MatCarouselModule.forRoot(),
+    // MatCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
