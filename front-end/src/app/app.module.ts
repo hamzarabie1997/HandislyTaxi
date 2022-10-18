@@ -1,4 +1,3 @@
-import { ContactModule } from './contact/contact.module';
 import { ServicesModule } from './services/services.module';
 import { HeaderModule } from './common/header/header.module';
 import { NgModule } from '@angular/core';
@@ -11,10 +10,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { HomeComponent } from './home/home.component';
-import { MatCarouselModule } from '@ngbmodule/material-carousel';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, ContactComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -25,9 +24,7 @@ import { MatCarouselModule } from '@ngbmodule/material-carousel';
     MatInputModule,
     HeaderModule,
     ServicesModule,
-    ContactModule,
     MatButtonModule,
-    MatCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

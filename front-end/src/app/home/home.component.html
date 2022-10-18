@@ -21,24 +21,36 @@
   <!------------------------------- White Space ------------------------->
   <div class="space"></div>
   <!------------------------------- SlideShow ------------------------->
-  <div class="slide-show">
-    <h1>Angular 10 Material Carousel Slider</h1>
+  <div class="slides-container">
+    <!-- <div class="mySlides fade">
+      <img
+        src="https://images.unsplash.com/photo-1518640027989-a30d5d7e498e?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=f9575732a498c98486879d7000ab1d47"
+        style="width: 100%"
+      />
+    </div>
 
-    <mat-carousel
-      timings="200ms ease-in"
-      [autoplay]="true"
-      interval="6000"
-      color="white"
-    >
-      <mat-carousel-slide
-        *ngFor="let slide of slides; let i = index"
-        [image]="slide.image"
-        overlayColor="#ffffff"
-        [hideOverlay]="false"
-      ></mat-carousel-slide>
-    </mat-carousel>
+    <div class="mySlides fade">
+      <img
+        src="https://images.unsplash.com/photo-1505843378597-b96befae716e?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=9e69634f39ec7c08514fef902cfc85ac"
+        style="width: 100%"
+      />
+    </div>
+
+    <div class="mySlides fade">
+      <img
+        src="https://images.unsplash.com/photo-1471138406156-7a89e687a062?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=7820fc816715b37942a793360b785c60"
+        style="width: 100%"
+      />
+    </div>
+
+    <br />
+
+    <div style="text-align: center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div> -->
   </div>
-
   <!------------------------------- White Space ------------------------->
   <div class="space"></div>
 
@@ -61,21 +73,29 @@
   <!------------------------------- White Space ------------------------->
   <div class="space"></div>
 
-  <!------------------------------- Get To Know Us ------------------------->
+  <!------------------------------- Know Us ------------------------->
   <div class="know-us">
     <div class="left">
-      <h2>GET TO KNOW US</h2>
-      <p id="title-know">
-        Looking for a top-notch Car Service ? Allow us to introduce ourselves.
-        We're Ta and our team of pros are available whenever you need us. We
-        don't just meet your expectations, we surpass them. Ta serves the needs
-        of residents in San Francisco and the surrounding area. Since 2000, our
-        company has been committed to being the best at what we do. See a full
-        list of our services below.
-      </p>
+      <div class="holder">
+        <h2 class="know-head">GET TO KNOW US</h2>
+        <p class="know-title">
+          Looking for a top-notch Car Service ? Allow us to introduce ourselves.
+          We're Ta and our team of pros are available whenever you need us. We
+          don't just meet your expectations, we surpass them. Ta serves the
+          needs of residents in San Francisco and the surrounding area. Since
+          2000, our company has been committed to being the best at what we do.
+          See a full list of our services below.
+        </p>
+        <button mat-stroked-button>Learn More</button>
+      </div>
     </div>
     <div class="right">
-      <img src="../../assets/download.jpeg" alt="Not Found">
+      <img class="know-img" src="../../assets/download.jpeg" alt="Not Found" />
     </div>
   </div>
+
+  <!------------------------------- White Space ------------------------->
+  <div class="space"></div>
+
+  <!------------------------------- Document End ------------------------->
 </div>
