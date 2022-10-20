@@ -11,6 +11,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, ContactComponent],
@@ -25,6 +27,8 @@ import { ContactComponent } from './contact/contact.component';
     HeaderModule,
     ServicesModule,
     MatButtonModule,
+    IvyCarouselModule,
+    SlickCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
