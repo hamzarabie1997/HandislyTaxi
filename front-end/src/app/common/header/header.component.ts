@@ -26,6 +26,7 @@ export class HeaderComponent implements OnInit {
 
   navigateTo(index: number) {
     this.router.navigate([this.menuPaths[index]]);
+    console.log('Try debugging');
     this.currentSelection = this.menuItems[index];
   }
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { HomeService } from './home.service';
 
 @Component({
   selector: 'app-home',
@@ -24,7 +26,30 @@ export class HomeComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  subForm = new FormGroup({
+    email: new FormControl('', [
+      Validators.required,
+      Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
+    ]),
+  });
+
+  subscribe_user() {
+    let sub_user = {
+      sub_email: this.subForm.value.email,
+    };
+    if (this.subForm.valid) {
+      this.http.sendSub('http://localhost:3000/backend', sub_user).subscribe({
+        next: (data) => {
+          let res: any = data;
+        },
+        error: (err) => {
+          console.log(err);
+        },
+      });
+    }
+  }
+
+  constructor(public http: HomeService) {}
 
   ngOnInit(): void {}
 }

@@ -72,6 +72,7 @@
         <button mat-stroked-button>Learn More</button>
       </div>
     </div>
+
     <div class="right">
       <img
         class="know-img"
@@ -82,19 +83,35 @@
   </div>
 
   <!------------------------------- White Space ------------------------->
+
+  <app-contact></app-contact>
+
   <div class="space"></div>
 
   <!------------------------------- Subscribe Form ------------------------->
-  <div class="sub-form">
-    <h2 class="sub-head">Subscribe Form</h2>
-    <div class="sub-input">
-      <mat-form-field appearance="fill">
-        <mat-label> e.g., email@example.com</mat-label>
-        <input matInput />
+  <form [formGroup]="subForm">
+    <div class="sub-head">Subscribe Form</div>
+    <div class="sub-form">
+      <mat-form-field class="form-field" appearance="fill">
+        <mat-label> E-mail </mat-label>
+        <input matInput formControlName="email" />
+        <mat-error *ngIf="subForm.controls.email.status === 'INVALID'"
+          >Wrong Form</mat-error
+        >
       </mat-form-field>
-    <button mat-flat-button>Join</button>
+
+      <div class="button">
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          (click)="subscribe_user()"
+        >
+          Join
+        </button>
+      </div>
     </div>
-  </div>
+  </form>
 
   <!------------------------------- Document End ------------------------->
 </div>
