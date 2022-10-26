@@ -154,34 +154,37 @@ form {
   height: 300px;
 }
 
+.form-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .sub-head {
   font-size: 30px;
   color: $text-color;
   font-family: $font-family;
+  margin: 10px;
 }
 
-.sub-form{
+.sub-form {
   display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
 }
 
-::ng-deep .mat-form-field {
-    .mat-input-element {
-        color: slategray;
-    }
-    .mat-form-field-label {
-        color: slategray;
-    }
-    .mat-form-field-underline {
-        background-color: yellow;
-    }
+
+::ng-deep .mat-form-field-flex{
+  border: 2px rgb(95, 93, 93) solid;
+}
+
+::ng-deep .mat-form-field-flex {
     .mat-form-field-ripple {
-        background-color: slategray;
-    }
-    .mat-form-field-required-marker {
-        color: slategray;
+        background-color: rgb(95, 93, 93);
     }
 }
 
 .mat-raised-button {
   background-color: #1c5f4e;
+  height: 73%;
 }
