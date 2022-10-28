@@ -1,6 +1,6 @@
 @import "./../../assets/variables.scss";
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
-.container {
+.page-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -11,8 +11,19 @@
 
 .greetings {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  flex-basis: 50%;
 }
+
+.greetings-container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  div {
+    margin-bottom: 10px;
+  }
+}
+
 .welcome-message {
   font-size: 40px;
   line-height: 40px;
@@ -21,117 +32,74 @@
 }
 
 .info-container {
+  display: flex;
+  flex-direction: column;
   color: #1c5f4e;
   font-family: "Lato", sans-serif;
-  justify-content: space-evenly;
+  div {
+    margin-bottom: 20px;
+  }
 }
 
 /*<-------------   Form Styling  ------------------->*/
 
 .form {
   display: flex;
-  align-items: center;
-  width: calc(100% / 3);
+  justify-content: center;
+  flex-basis: 50%;
 }
 
-.form-field {
-  margin-right: 5px;
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mat-raised-button {
+  background-color: #1c5f4e;
+}
+
+.upper {
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.upper > div {
+  display: flex;
+  flex-basis: calc(40% - 40px);
+  justify-content: center;
+  flex-direction: column;
+}
+
+.field-upper {
+  margin-right: 10px;
+}
+
+.lower {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.lower > div {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+::ng-deep .mat-form-field-flex {
+  .mat-form-field-label {
+    color: #2a7c6f;
+  }
+  .mat-form-field-required-marker {
+    color: white;
+  }
 }
 
 .mat-raised-button {
   background-color: #1c5f4e;
   width: 100%;
 }
-/*
-.input-box {
-  height: 42px;
-  width: 225px;
-  margin-bottom: 10px;
-}
-
-.inputs .input-box input {
-  border-top: 1px solid white;
-  border-right: 1px solid white;
-  border-left: 1px solid white;
-  border-bottom: 1px solid $text-color;
-  padding: 3px 3px 3px 12px;
-  height: 34px;
-  width: 208px;
-  outline: none;
-  font-size: 16px;
-}
-
-.special-css {
-  width: 460px;
-  height: 42px;
-  margin-bottom: 10px;
-}
-
-.special-css input {
-  border-top: 1px solid white;
-  border-right: 1px solid white;
-  border-left: 1px solid white;
-  border-bottom: 1px solid $text-color;
-  padding: 3px 3px 3px 12px;
-  height: 35px;
-  width: 445px;
-  outline: none;
-  font-size: 16px;
-}
-
-.text-message {
-  width: 460px;
-  height: 127px;
-  margin-bottom: 37px;
-}
-textarea {
-  border-top: 1px solid white;
-  border-right: 1px solid white;
-  border-left: 1px solid white;
-  border-bottom: 1px solid $text-color;
-  height: 110.75px;
-  width: 434px;
-  outline: none;
-  padding: 11.25px 10px 3px 16px;
-  font-size: 16px;
-  resize: none;
-}
-
-.button {
-  width: 460px;
-  height: 50px;
-  margin-bottom: 11px;
-}
-
-.button button {
-  width: 460px;
-  height: 50px;
-  border: 0;
-  color: white;
-  background-color: $text-color;
-  font-size: 16px;
-  font-family: "Lato", sans-serif;
-}
-
-::placeholder {
-  color: $text-color;
-  font-family: "Lato", sans-serif;
-}
-
-.inputs .input-box input:hover {
-  border: 1px solid $text-color;
-}
-
-.special-css input:hover {
-  border: 1px solid $text-color;
-}
-
-textarea:hover {
-  border: 1px solid $text-color;
-}
-
-.button button:hover {
-  background: linear-gradient(to right, #b6c4b7, #b6c4b7);
-}
-
-*/

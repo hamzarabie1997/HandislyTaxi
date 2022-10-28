@@ -1,65 +1,84 @@
-<div class="container">
+<div class="page-container">
   <div class="greetings">
-    <div class="welcome-message">
-      WE WANT TO HEAR <br />
-      FROM YOU!
-    </div>
-    <div class="info-container">
-      <div>
-        <p>500 Terry Francois Street, 6th Floor. San Francisco, CA 94158</p>
+    <div class="greetings-container">
+      <div class="welcome-message">
+        WE WANT TO HEAR <br />
+        FROM YOU!
       </div>
-      <div><p>info@mysite.com</p></div>
-      <div><p>123-456-789</p></div>
+      <div class="info-container">
+        <div>500 Terry Francois Street, 6th Floor. San Francisco, CA 94158</div>
+        <div>info@mysite.com</div>
+        <div>123-456-789</div>
+      </div>
     </div>
   </div>
 
   <div class="form">
     <form [formGroup]="myForm">
-      <mat-form-field class="form-field" appearance="fill">
-        <mat-label> Name </mat-label>
-        <input matInput formControlName="name" />
-        <mat-error *ngIf="myForm.controls.name.value === ''"
-          >Can't be empty</mat-error
-        >
-      </mat-form-field>
+      <div class="form-container">
+        <div class="upper">
+          <div class="field-upper">
+            <mat-form-field class="form-field" appearance="fill">
+              <mat-label> Name </mat-label>
+              <input matInput formControlName="name" />
+              <mat-error *ngIf="myForm.controls.name.value === ''"
+                >Can't be empty</mat-error
+              >
+            </mat-form-field>
+          </div>
+          <div class="field-upper">
+            <mat-form-field class="form-field" appearance="fill">
+              <mat-label> E-mail </mat-label>
+              <input matInput formControlName="email" />
+              <mat-error *ngIf="myForm.controls.email.status === 'INVALID'"
+                >Wrong Form</mat-error
+              >
+            </mat-form-field>
+          </div>
+          <div class="field-upper">
+            <mat-form-field class="form-field" appearance="fill">
+              <mat-label> Address </mat-label>
+              <input matInput formControlName="address" />
+            </mat-form-field>
+          </div>
+          <div class="field-upper">
+            <mat-form-field class="form-field" appearance="fill">
+              <mat-label> Phone </mat-label>
+              <input
+                matInput
+                formControlName="phone"
+                (keydown)="phoneHandler($event)"
+                type="number"
+              />
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="lower">
+          <div class="field-lower">
+            <mat-form-field class="form-field" appearance="fill">
+              <mat-label> Subject </mat-label>
+              <input matInput formControlName="subject" />
+            </mat-form-field>
+          </div>
 
-      <mat-form-field class="form-field" appearance="fill">
-        <mat-label> E-mail </mat-label>
-        <input matInput formControlName="email" />
-        <mat-error *ngIf="myForm.controls.email.status === 'INVALID'"
-          >Wrong Form</mat-error
-        >
-      </mat-form-field>
+          <div class="field-lower">
+            <mat-form-field class="form-field" appearance="fill">
+              <mat-label> Enter Your Message here... </mat-label>
+              <textarea matInput formControlName="message"></textarea>
+            </mat-form-field>
+          </div>
 
-      <mat-form-field class="form-field" appearance="fill">
-        <mat-label> Address </mat-label>
-        <input matInput formControlName="address" />
-      </mat-form-field>
-
-      <mat-form-field class="form-field" appearance="fill">
-        <mat-label> Phone </mat-label>
-        <input matInput formControlName="phone"  (keydown)="phoneHandler($event)" type="number">
-      </mat-form-field>
-
-      <mat-form-field class="form-field" appearance="fill">
-        <mat-label> Subject </mat-label>
-        <input matInput formControlName="subject" />
-      </mat-form-field>
-
-      <mat-form-field class="form-field" appearance="fill">
-        <mat-label> Enter Your Message here... </mat-label>
-        <textarea matInput formControlName="message"></textarea>
-      </mat-form-field>
-
-      <div class="button">
-        <button
-          mat-raised-button
-          color="primary"
-          type="submit"
-          (click)="register()"
-        >
-          Submit
-        </button>
+          <div class="field-lower">
+            <button
+              mat-raised-button
+              color="primary"
+              type="submit"
+              (click)="register()"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
       </div>
     </form>
   </div>
