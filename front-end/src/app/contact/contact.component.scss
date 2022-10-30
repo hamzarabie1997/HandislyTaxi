@@ -2,26 +2,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 .page-container {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: center;
   margin-top: 100px;
 }
 
 /*<----------------- Left Part Styling ---------------->*/
 
-.greetings {
-  display: flex;
-  justify-content: center;
-  flex-basis: 50%;
-}
-
 .greetings-container {
   display: flex;
-  height: 100%;
   flex-direction: column;
-  div {
-    margin-bottom: 10px;
-  }
+  align-items: center;
+  width: 50%;
 }
 
 .welcome-message {
@@ -29,39 +20,33 @@
   line-height: 40px;
   font-family: "Lato", sans-serif;
   color: $text-color;
+  margin-bottom: 30px;
 }
 
 .info-container {
-  display: flex;
-  flex-direction: column;
   color: #1c5f4e;
   font-family: "Lato", sans-serif;
   div {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 
 /*<-------------   Form Styling  ------------------->*/
 
-.form {
-  display: flex;
-  justify-content: center;
-  flex-basis: 50%;
-}
-
 .form-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  width: 50%;
 }
 
-.mat-raised-button {
-  background-color: #1c5f4e;
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
 }
 
 .upper {
-  min-height: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -69,11 +54,10 @@
 
 .upper > div {
   display: flex;
-  flex-basis: calc(40% - 40px);
+  flex-basis: calc(50% - 95px);
   justify-content: center;
   flex-direction: column;
 }
-
 .field-upper {
   margin-right: 10px;
 }
@@ -81,25 +65,44 @@
 .lower {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .lower > div {
   display: flex;
-  width: 100%;
+  width: calc(100% - 180px);
+  justify-content: center;
   flex-direction: column;
 }
 
-::ng-deep .mat-form-field-flex {
+
+/*<-------------   Form Fields Styling  ------------------->*/
+
+::ng-deep .mat-form-field {
   .mat-form-field-label {
-    color: #2a7c6f;
+    color: #1c5f4e;
+    font-family: $font-family;
+  }
+  .mat-form-field-underline::before {
+    background-color: #2a7c6f;
+  }
+  .mat-form-field-ripple {
+    background-color: #2a7c6f;
   }
   .mat-form-field-required-marker {
-    color: white;
+    color: #1c5f4e;
   }
 }
 
+::ng-deep .mat-form-field-flex:hover {
+  border: #2a7c6f 1px solid;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: rgba(0, 0, 0, 0);
+}
+
 .mat-raised-button {
-  background-color: #1c5f4e;
-  width: 100%;
+  background-color: #2a7c6f;
+  font-family: $font-family;
 }

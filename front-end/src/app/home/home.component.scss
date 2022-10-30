@@ -174,15 +174,15 @@ form {
 }
 
 
-::ng-deep .mat-form-field-flex{
-  border: 2px rgb(95, 93, 93) solid;
-}
+// ::ng-deep .mat-form-field-flex{
+//   border: 2px rgb(95, 93, 93) solid;
+// }
 
-::ng-deep .mat-form-field-flex {
-    .mat-form-field-ripple {
-        background-color: rgb(95, 93, 93);
-    }
-}
+// ::ng-deep .mat-form-field-flex {
+//     .mat-form-field-ripple {
+//         background-color: rgb(95, 93, 93);
+//     }
+// }
 
 .mat-raised-button {
   background-color: #1c5f4e;
