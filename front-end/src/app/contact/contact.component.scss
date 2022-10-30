@@ -75,7 +75,6 @@ form {
   flex-direction: column;
 }
 
-
 /*<-------------   Form Fields Styling  ------------------->*/
 
 ::ng-deep .mat-form-field {
@@ -86,6 +85,8 @@ form {
   .mat-form-field-underline::before {
     background-color: #2a7c6f;
   }
+
+
   .mat-form-field-ripple {
     background-color: #2a7c6f;
   }
@@ -105,4 +106,23 @@ form {
 .mat-raised-button {
   background-color: #2a7c6f;
   font-family: $font-family;
+}
+
+::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+  color: #1c5f4e;
+}
+
+::ng-deep
+  .mat-form-field.mat-form-field-invalid
+  .mat-form-field-label
+  .mat-form-field-required-marker {
+  color: #1c5f4e;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: #1c5f4e;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: #1c5f4e;
 }
