@@ -1,37 +1,39 @@
-@import './../../../assets/variables.scss';
+@import "./../../../assets/variables.scss";
 
 .header-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: $header-height;
-    color: $header-menu-color;
-    font-size: 28px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $header-height;
+  color: $header-menu-color;
+  font-size: 28px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: $white;
 }
 
 .header-menu {
-    background-color: $header-menu-color;
-    align-items: center;
-    display: flex;
-    color: $text-white;
-    height: $header-menu-height;
-    justify-content: center;
+  background-color: $header-menu-color;
+  align-items: center;
+  display: flex;
+  color: $text-white;
+  height: $header-menu-height;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  div {
+    padding-right: 30px;
+  }
 
-    div {
-        padding-right: 30px;
+  .currentPage {
+    text-decoration: underline;
+  }
+
+  .header-option {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
     }
-
-    .currentPage {
-        text-decoration: underline;
-    }
-
-    .header-option {
-        cursor: pointer;
-
-        &:hover {
-            opacity: 0.5;
-        }
-    }
+  }
 }

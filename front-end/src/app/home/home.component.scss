@@ -179,6 +179,9 @@ form {
 // }
 
 // ::ng-deep .mat-form-field-flex {
+//     .mat-form-field-label {
+//         color: $text-color;
+//     }
 //     .mat-form-field-ripple {
 //         background-color: rgb(95, 93, 93);
 //     }
@@ -186,5 +189,5 @@ form {
 
 .mat-raised-button {
   background-color: #1c5f4e;
-  height: 73%;
+  height: 75%
 }

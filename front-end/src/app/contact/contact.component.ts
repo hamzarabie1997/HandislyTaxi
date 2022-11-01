@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ContactService } from './contact.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -6,9 +6,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ContactComponent implements OnInit {
-
   myForm = new FormGroup({
     name: new FormControl('', [
       Validators.required,

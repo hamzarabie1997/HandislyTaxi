@@ -12,10 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { ContactModule } from './contact/contact.module';
 import { HttpClientModule } from '@angular/common/http';
-import { MAT_RIPPLE_GLOBAL_OPTIONS } from '@angular/material/core';
 import { RippleGlobalOptions } from '@angular/material/core';
-
-
 
 const globalRippleConfig: RippleGlobalOptions = {
   disabled: true,
@@ -41,9 +38,7 @@ const globalRippleConfig: RippleGlobalOptions = {
     ContactModule,
     HttpClientModule,
   ],
-  providers: [
-    { provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: globalRippleConfig },
-  ],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
