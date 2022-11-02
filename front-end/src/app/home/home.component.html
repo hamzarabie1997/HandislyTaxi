@@ -39,7 +39,7 @@
 
   <!------------------------------- Paragraph Part ------------------------->
   <div class="under-slides">
-    <h1>
+    <h1 class="under-slides-h1">
       TAXI PROFESSIONAL TRANSPORTATION <br />
       SERVICES
     </h1>
@@ -89,11 +89,11 @@
   <div class="space"></div>
 
   <!------------------------------- Subscribe Form ------------------------->
-  <form [formGroup]="subForm">
+  <form class="sub-main" [formGroup]="subForm">
     <div class="form-container">
       <div class="sub-head">Subscribe Form</div>
       <div class="sub-form">
-        <mat-form-field appearance="fill">
+        <mat-form-field class="sub-field" appearance="fill">
           <mat-label> E-mail </mat-label>
           <input matInput formControlName="email" />
           <mat-error *ngIf="subForm.controls.email.status === 'INVALID'"
@@ -104,6 +104,7 @@
         <div class="button">
           <button
             mat-raised-button
+            class="sub-btn"
             color="primary"
             type="submit"
             (click)="subscribe_user()"

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HomeService } from './home.service';
 
@@ -6,6 +6,7 @@ import { HomeService } from './home.service';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class HomeComponent implements OnInit {
   images = [
@@ -34,11 +35,11 @@ export class HomeComponent implements OnInit {
   });
 
   subscribe_user() {
-    let sub_user = {
-      sub_email: this.subForm.value.email,
+    let user = {
+      email: this.subForm.value.email,
     };
     if (this.subForm.valid) {
-      this.http.sendSub('http://localhost:3000/backend', sub_user).subscribe({
+      this.http.newSubscribe('http://localhost:3000/backend', user).subscribe({
         next: (data) => {
           let res: any = data;
         },

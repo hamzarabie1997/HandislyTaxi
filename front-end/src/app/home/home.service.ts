@@ -17,7 +17,7 @@ export class HomeService {
     return this.http.post(url, { name: 'Hamza' });
   }
 
-  sendSub(url, data) {
+  newSubscribe(url, data) {
     return this.http.post(url, data);
   }
 

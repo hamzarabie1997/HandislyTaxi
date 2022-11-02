@@ -11,7 +11,7 @@
   </div>
 
   <div class="form-container">
-    <form [formGroup]="myForm">
+    <form class="contact-form" [formGroup]="myForm">
       <div class="upper">
         <div class="field-upper">
           <mat-form-field class="form-field" appearance="fill">
@@ -64,10 +64,11 @@
           </mat-form-field>
         </div>
 
-      
+        
         <div class="field-lower">
           <button
             mat-raised-button
+            class="form-btn"
             color="primary"
             type="submit"
             (click)="register()"

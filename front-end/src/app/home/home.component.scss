@@ -24,7 +24,7 @@
   min-width: 50%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   color: $text-white;
   font-size: 56px;
   line-height: 80px;
@@ -71,7 +71,7 @@ a:hover {
 }
 
 // ************* Paragraph Part **************** //
-h1 {
+.under-slides-h1 {
   color: $text-color;
   line-height: 72px;
   text-align: center;
@@ -148,7 +148,7 @@ p {
 }
 // ************* Subscribe Form **************** //
 
-form {
+.sub-main {
   display: flex;
   justify-content: center;
   height: 300px;
@@ -173,21 +173,34 @@ form {
   margin: 10px;
 }
 
+.mat-form-field.sub-field .mat-form-field-wrapper {
+  /* Label Styling */
+  .mat-form-field-label {
+    color: $text-color;
+    font-family: $font-family;
+  }
 
-// ::ng-deep .mat-form-field-flex{
-//   border: 2px rgb(95, 93, 93) solid;
-// }
+  /* Field Styling */
+  .mat-form-field-flex {
+    border: 2px solid grey;
+    background-color: rgba(0, 0, 0, 0);
+  }
 
-// ::ng-deep .mat-form-field-flex {
-//     .mat-form-field-label {
-//         color: $text-color;
-//     }
-//     .mat-form-field-ripple {
-//         background-color: rgb(95, 93, 93);
-//     }
-// }
+  /* Underline & Ripple Styling */
+  .mat-form-field-ripple {
+    background-color: grey;
+  }
+}
 
-.mat-raised-button {
-  background-color: #1c5f4e;
-  height: 75%
+/* Button Styling */
+.mat-raised-button.sub-btn .mat-button-wrapper {
+  font-family: $font-family;
+}
+
+.mat-raised-button.sub-btn.mat-primary {
+  background-color: $text-color;
+}
+
+.mat-raised-button.sub-btn{
+  height: 75%;
 }

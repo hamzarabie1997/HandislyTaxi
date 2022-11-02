@@ -29,36 +29,15 @@ app.get("/", (req, res) => {
 app.post("/backend", (req, res) => {
   console.log("request came");
   let user = req.body;
-  sendMail(user, (info) => {
+  newSub(user, (info) => {
     res.send(info);
   });
 });
 
-async function sendMail(user, callback) {
-  // create reusable transporter object using the default SMTP transport
-  let transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
-    auth: {
-      user: "hamza.rabie1997@gmail.com",
-      pass: "jzbtsmotbgxsuuid",
-    },
-  });
-
-  let mailOptions = {
-    from: "TaxiApp",
-    to: "hamza.rabie1997@gmail.com",
-    subject: "New Subscribtion",
-    html: `<p><b>Name:</b> ${user.sub_email}</p>`,
-  };
-
-  // send mail with defined transport object
-  let info = await transporter.sendMail(mailOptions);
-
+async function newSub(user) {
   let save = function () {
     var input = {
-      email: user.sub_email,
+      email: user.email,
     };
 
     var params = {
@@ -94,5 +73,4 @@ async function sendMail(user, callback) {
   };
 
   save();
-  callback(info);
 }

@@ -41,7 +41,7 @@
   width: 50%;
 }
 
-form {
+.contact-form {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -125,11 +125,11 @@ input::-webkit-inner-spin-button {
 }
 
 /* Button Styling */
-.mat-raised-button .mat-button-wrapper {
+.mat-raised-button.form-btn .mat-button-wrapper {
   font-family: $font-family;
 }
 
 /* Button Styling */
-.mat-raised-button.mat-primary {
+.mat-raised-button.form-btn.mat-primary {
   background-color: $text-color;
 }
