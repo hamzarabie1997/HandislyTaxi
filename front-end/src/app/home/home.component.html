@@ -23,6 +23,7 @@
   <!------------------------------- SlideShow ------------------------->
   <div class="slides-container">
     <carousel
+      style="z-index: -1"
       [images]="images"
       [dots]="true"
       [arrows]="false"
@@ -39,10 +40,10 @@
 
   <!------------------------------- Paragraph Part ------------------------->
   <div class="under-slides">
-    <h1 class="under-slides-h1">
+    <div class="under-slides-h1">
       TAXI PROFESSIONAL TRANSPORTATION <br />
       SERVICES
-    </h1>
+    </div>
     <p>
       At Handisly Taxi, we offer quality corporate and private transportation
       services across the entire San Francisco area at <br />
@@ -60,7 +61,7 @@
   <div class="know-us">
     <div class="left">
       <div class="holder">
-        <h2 class="know-head">GET TO KNOW US</h2>
+        <div class="know-head">GET TO KNOW US</div>
         <p class="know-title">
           Looking for a top-notch Car Service ? Allow us to introduce ourselves.
           We're Ta and our team of pros are available whenever you need us. We
@@ -90,7 +91,7 @@
 
   <!------------------------------- Subscribe Form ------------------------->
   <form class="sub-main" [formGroup]="subForm">
-    <div class="form-container">
+    <div class="sub-form-container">
       <div class="sub-head">Subscribe Form</div>
       <div class="sub-form">
         <mat-form-field class="sub-field" appearance="fill">
