@@ -12,8 +12,8 @@
 
   <div class="form-container">
     <form class="contact-form" [formGroup]="myForm">
-      <div class="upper">
-        <div class="field-upper">
+      <div class="upper-part">
+        <div class="text-field">
           <mat-form-field class="form-field" appearance="fill">
             <mat-label> Name </mat-label>
             <input matInput formControlName="name" />
@@ -22,7 +22,7 @@
             >
           </mat-form-field>
         </div>
-        <div class="field-upper">
+        <div class="text-field">
           <mat-form-field class="form-field" appearance="fill">
             <mat-label> E-mail </mat-label>
             <input matInput formControlName="email" />
@@ -31,13 +31,13 @@
             >
           </mat-form-field>
         </div>
-        <div class="field-upper">
+        <div class="text-field">
           <mat-form-field class="form-field" appearance="fill">
             <mat-label> Address </mat-label>
             <input matInput formControlName="address" />
           </mat-form-field>
         </div>
-        <div class="field-upper">
+        <div class="text-field">
           <mat-form-field class="form-field" appearance="fill">
             <mat-label> Phone </mat-label>
             <input
@@ -49,15 +49,15 @@
           </mat-form-field>
         </div>
       </div>
-      <div class="lower">
-        <div class="field-lower-1">
+      <div class="lower-part">
+        <div>
           <mat-form-field class="form-field" appearance="fill">
             <mat-label> Subject </mat-label>
             <input matInput formControlName="subject" />
           </mat-form-field>
         </div>
 
-        <div class="field-lower-2">
+        <div>
           <mat-form-field class="form-field" appearance="fill">
             <mat-label> Type Your Message here... </mat-label>
             <textarea style="resize: none;" matInput formControlName="message"></textarea>
@@ -65,7 +65,7 @@
         </div>
 
         
-        <div class="field-lower">
+        <div>
           <button
             mat-raised-button
             class="form-btn"

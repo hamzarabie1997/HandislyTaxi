@@ -2,12 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 
 // ************* Welcome Banner **************** //
-.container{
+.container {
   position: relative;
   overflow: scroll;
   height: 100%;
 }
-
 
 .welcome-banner {
   display: flex;
@@ -78,7 +77,10 @@ a:hover {
 }
 
 // ************* Paragraph Part **************** //
-.under-slides-h1 {
+.paragraph-part {
+  margin-top: -60px;
+}
+.paragraph-title {
   color: $text-color;
   line-height: 72px;
   text-align: center;
@@ -86,10 +88,7 @@ a:hover {
   font-family: $font-family;
 }
 
-.part-2 {
-  margin-top: 40px;
-}
-p {
+.description {
   color: $text-color;
   line-height: 30px;
   text-align: center;
@@ -104,13 +103,13 @@ p {
   justify-content: center;
 }
 
-.left {
+.left-side {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-basis: 50%;
 
-  .holder {
+  .left-side-holder {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -119,38 +118,49 @@ p {
   }
 }
 
-.right {
-  flex-basis: 50%;
-}
-
-.know-head {
+.know-us-head {
   color: $text-color;
   font-size: 40px;
   font-family: $font-family;
   margin-bottom: 30px;
 }
 
-.know-title {
+.know-us-description {
   text-align: left;
   line-height: 1.875em;
   font-size: 15px;
+  color: $text-color;
+  font-family: $font-family;
+  margin-bottom: 20px;
 }
 
 .mat-stroked-button {
-  color: $text-color;
-  font-family: $font-family;
-  border: 1px $text-color solid;
-  border-radius: 360px;
   align-self: flex-start;
   margin-top: 30px;
 }
 
 .mat-stroked-button:hover {
   background-color: $text-color;
-  color: #fffcf7;
+  .mat-button-wrapper {
+    color: white;
+  }
 }
 
-.know-img {
+.mat-stroked-button .mat-button-wrapper {
+  color: $text-color;
+  font-family: $font-family;
+}
+
+.mat-stroked-button.stroked-btn .mat-button-ripple {
+  border: 1px $text-color solid;
+  border-radius: 360px;
+}
+
+.right-side {
+  flex-basis: 50%;
+}
+
+.know-us-img {
   width: 100%;
 }
 // ************* Subscribe Form **************** //
@@ -165,6 +175,7 @@ p {
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 }
 
 .sub-head {
@@ -177,7 +188,9 @@ p {
 .sub-form {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin: 10px;
+  width: 100%;
 }
 
 .mat-form-field.sub-field .mat-form-field-wrapper {
@@ -189,13 +202,15 @@ p {
 
   /* Field Styling */
   .mat-form-field-flex {
-    border: 2px solid grey;
+    border: 2px solid black;
     background-color: rgba(0, 0, 0, 0);
+    width: 450px;
+    border-radius: 0%;
   }
 
   /* Underline & Ripple Styling */
   .mat-form-field-ripple {
-    background-color: grey;
+    background-color: black;
   }
 }
 
@@ -206,8 +221,9 @@ p {
 
 .mat-raised-button.sub-btn.mat-primary {
   background-color: $text-color;
+  border-radius: 0;
 }
 
-.mat-raised-button.sub-btn{
+.mat-raised-button.sub-btn {
   height: 75%;
 }
