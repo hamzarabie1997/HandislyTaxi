@@ -18,14 +18,14 @@
 .welcome-message {
   font-size: 40px;
   line-height: 40px;
-  font-family: "Lato", sans-serif;
+  font-family: $font-family;
   color: $text-color;
   margin-bottom: 30px;
 }
 
 .info-container {
   color: $banner-green;
-  font-family: "Lato", sans-serif;
+  font-family: $font-family;
   div {
     margin-bottom: 30px;
   }
@@ -67,6 +67,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  height: fit-content;
 }
 
 .lower-part > div {
@@ -90,7 +91,6 @@ input::-webkit-inner-spin-button {
   .mat-form-field-label {
     color: $text-color;
     font-family: $font-family;
-    
   }
 
   /* Underline & Ripple Styling */
@@ -132,10 +132,24 @@ input::-webkit-inner-spin-button {
 /* Button Styling */
 .mat-raised-button.form-btn .mat-button-wrapper {
   font-family: $font-family;
+  font-size: 18px;
+  height: 50px;
 }
+
 
 /* Button Styling */
 .mat-raised-button.form-btn.mat-primary {
   background-color: $text-color;
   border-radius: 0%;
+  height: 50px;
+}
+
+.mat-form-field.special-field .mat-form-field-wrapper{
+  .mat-form-field-flex {
+    height: 120px;
+  }
+}
+
+.message-field {
+  height: fit-content;
 }

@@ -151,10 +151,11 @@ a:hover {
   font-family: $font-family;
 }
 
-.mat-stroked-button.stroked-btn .mat-button-ripple {
+.mat-stroked-button.stroked-btn{
   border: 1px $text-color solid;
   border-radius: 360px;
 }
+
 
 .right-side {
   flex-basis: 50%;
