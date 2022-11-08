@@ -94,8 +94,11 @@
       <div class="sub-head">Subscribe Form</div>
       <div class="sub-form">
         <mat-form-field class="sub-field" appearance="fill">
-          <mat-label> E-mail </mat-label>
-          <input matInput formControlName="email" />
+          <input
+            placeholder="e.g., email@example.com"
+            matInput
+            formControlName="email"
+          />
           <mat-error *ngIf="subForm.controls.email.status === 'INVALID'"
             >Wrong Form</mat-error
           >

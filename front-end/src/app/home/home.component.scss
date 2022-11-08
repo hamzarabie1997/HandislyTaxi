@@ -151,11 +151,10 @@ a:hover {
   font-family: $font-family;
 }
 
-.mat-stroked-button.stroked-btn{
+.mat-stroked-button.stroked-btn {
   border: 1px $text-color solid;
   border-radius: 360px;
 }
-
 
 .right-side {
   flex-basis: 50%;
@@ -195,19 +194,15 @@ a:hover {
 }
 
 .mat-form-field.sub-field .mat-form-field-wrapper {
-  /* Label Styling */
-  .mat-form-field-label {
-    color: $text-color;
-    font-family: $font-family;
-  }
-
+  width: 450px;
   /* Field Styling */
   .mat-form-field-flex {
     border: 2px solid black;
-    background-color: rgba(0, 0, 0, 0);
-    width: 450px;
+    background-color: white;
     border-radius: 0%;
   }
+
+  
 
   /* Underline & Ripple Styling */
   .mat-form-field-ripple {
@@ -226,5 +221,20 @@ a:hover {
 }
 
 .mat-raised-button.sub-btn {
-  height: 75%;
+  height: 50px;
+}
+
+.mat-form-field.sub-field .mat-form-field-infix {
+  border-top: 0;
+}
+
+.mat-form-field.sub-field .mat-form-field-wrapper {
+  .mat-form-field-flex {
+    height: 50px;
+  }
+}
+
+.mat-form-field.sub-field .mat-form-field-infix ::placeholder {
+  color: black;
+  font-style: italic;
 }
