@@ -37,7 +37,8 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 50%;
+  width: 640px;
+  flex-shrink: 0;
 }
 
 .contact-form {
