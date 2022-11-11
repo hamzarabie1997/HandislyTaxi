@@ -202,11 +202,21 @@ a:hover {
     border-radius: 0%;
   }
 
-  
-
   /* Underline & Ripple Styling */
   .mat-form-field-ripple {
     background-color: black;
+  }
+
+  &:focus-within {
+    .mat-form-field-flex {
+      border: 2px solid $text-color;
+      background-color: white;
+      border-radius: 0%;
+    }
+
+    .mat-form-field-ripple {
+      background-color: $text-color;
+    }
   }
 }
 

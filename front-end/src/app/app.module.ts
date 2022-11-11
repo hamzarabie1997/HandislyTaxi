@@ -8,13 +8,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { HomeComponent } from './home/home.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { ContactModule } from './contact/contact.module';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -29,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     IvyCarouselModule,
     ContactModule,
     HttpClientModule,
+    HomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
