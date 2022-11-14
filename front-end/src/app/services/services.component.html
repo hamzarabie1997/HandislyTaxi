@@ -65,9 +65,14 @@
     <div class="services-title">
         Book a Service
     </div>
-    <div class="services-table">
-        TESSSTTT
-    </div>
+    <div *ngFor="let service of services | async">
+  <p>{{service.name}}</p>
+  <p>{{service.availability}}</p>
+  <p>{{service.duration}}</p>
+  <p>{{service.price}}</p>
+  <p>{{service.img}}</p>
+  <p>{{service.description}}</p>
+</div>
   </div>
 
 

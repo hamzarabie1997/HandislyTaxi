@@ -12,15 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { ContactModule } from './contact/contact.module';
 import { HttpClientModule } from '@angular/common/http';
-import { RippleGlobalOptions } from '@angular/material/core';
 
-const globalRippleConfig: RippleGlobalOptions = {
-  disabled: true,
-  animation: {
-    enterDuration: 0,
-    exitDuration: 0,
-  },
-};
 @NgModule({
   declarations: [AppComponent, HomeComponent],
   imports: [
