@@ -61,29 +61,33 @@
   <div class="space"></div>
 
   <!------------------------------- Services Table ------------------------->
-  <div class="services-table-container">
-    <div class="services-title">
-        Book a Service
+  <div class="table-container">
+    <div class="table-title">Book a Service</div>
+    <div class="services-container" *ngFor="let service of services | async">
+      <mat-divider></mat-divider>
+      <div class="service-object">
+        <div class="service-img">
+          <img src="{{ service.img }}" alt="Not Found" />
+        </div>
+        <div class="service-name">{{ service.name }}</div>
+
+        <div class="info-box">
+          <div class="service-price">
+            {{ service.price }}$ Per {{ service.duration }}
+          </div>
+          <div class="service-info-link"><a href="">View More Info</a></div>
+        </div>
+        <div>
+          <button
+            mat-raised-button
+            class="book-btn"
+            color="primary"
+            type="submit"
+          >
+            Book Now
+          </button>
+        </div>
+      </div>
     </div>
-    <div *ngFor="let service of services | async">
-  <p>{{service.name}}</p>
-  <p>{{service.availability}}</p>
-  <p>{{service.duration}}</p>
-  <p>{{service.price}}</p>
-  <p>{{service.img}}</p>
-  <p>{{service.description}}</p>
-</div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
 </div>

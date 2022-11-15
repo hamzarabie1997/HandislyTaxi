@@ -4,7 +4,6 @@
   display: flex;
   justify-content: center;
   margin-top: 100px;
-  height: 100%;
 }
 
 /*<----------------- Left Part Styling ---------------->*/
@@ -19,14 +18,14 @@
 .welcome-message {
   font-size: 40px;
   line-height: 40px;
-  font-family: "Lato", sans-serif;
+  font-family: $font-family;
   color: $text-color;
   margin-bottom: 30px;
 }
 
 .info-container {
   color: $banner-green;
-  font-family: "Lato", sans-serif;
+  font-family: $font-family;
   div {
     margin-bottom: 30px;
   }
@@ -38,41 +37,41 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 50%;
+  width: 640px;
+  flex-shrink: 0;
 }
 
 .contact-form {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
+  padding-right: 170px;
 }
 
-.upper {
+.upper-part {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
 
-.upper > div {
+.upper-part > div {
   display: flex;
-  flex-basis: calc(50% - 95px);
+  flex-basis: calc(50% - 10px);
   justify-content: center;
   flex-direction: column;
-}
-.field-upper {
   margin-right: 10px;
 }
 
-.lower {
+.lower-part {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  height: fit-content;
+  margin-right: 10px;
 }
 
-.lower > div {
+.lower-part > div {
   display: flex;
-  width: calc(100% - 180px);
   justify-content: center;
   flex-direction: column;
 }
@@ -99,6 +98,10 @@ input::-webkit-inner-spin-button {
   }
 
   .mat-form-field-ripple {
+    height: 50%;
+    background-color: $text-color;
+  }
+  .mat-form-field-ripple:hover {
     background-color: $text-color;
   }
 
@@ -109,8 +112,9 @@ input::-webkit-inner-spin-button {
 
   /* Field Styling */
   .mat-form-field-flex {
-    border: white 1px solid;
-    background-color: rgba(0, 0, 0, 0);
+    border: $white 1px solid;
+    background-color: $white;
+    border-radius: 0%;
   }
   .mat-form-field-flex:hover {
     border: $text-color 1px solid;
@@ -127,9 +131,23 @@ input::-webkit-inner-spin-button {
 /* Button Styling */
 .mat-raised-button.form-btn .mat-button-wrapper {
   font-family: $font-family;
+  font-size: 18px;
+  height: 50px;
 }
 
 /* Button Styling */
 .mat-raised-button.form-btn.mat-primary {
   background-color: $text-color;
+  border-radius: 0%;
+  height: 50px;
+}
+
+.mat-form-field.special-field .mat-form-field-wrapper {
+  .mat-form-field-flex {
+    height: 120px;
+  }
+}
+
+.message-field {
+  height: fit-content;
 }

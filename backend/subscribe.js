@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const nodemailer = require("nodemailer");
 
 var AWS = require("aws-sdk");
 let awsConfig = {
@@ -62,9 +61,9 @@ async function newSub(user) {
         if (Object.keys(data).length === 0) {
           dynamodb.putItem(params2, function (err, data) {
             if (err) {
-              console.log("Error happened: " + JSON.stringify(err, null, 2));
+              throw (err);
             } else {
-              console.log("Added Successfully");
+              throw ("Added Successfully");
             }
           });
         }

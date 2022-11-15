@@ -36,15 +36,14 @@
     </carousel>
   </div>
   <!------------------------------- White Space ------------------------->
-  <div class="space"></div>
 
   <!------------------------------- Paragraph Part ------------------------->
-  <div class="under-slides">
-    <div class="under-slides-h1">
+  <div class="paragraph-part">
+    <div class="paragraph-title">
       TAXI PROFESSIONAL TRANSPORTATION <br />
       SERVICES
     </div>
-    <p>
+    <p class="description">
       At Handisly Taxi, we offer quality corporate and private transportation
       services across the entire San Francisco area at <br />
       reasonable prices. We know that in today’s world, time is money. That’s
@@ -59,24 +58,24 @@
 
   <!------------------------------- Know Us ------------------------->
   <div class="know-us">
-    <div class="left">
-      <div class="holder">
-        <div class="know-head">GET TO KNOW US</div>
-        <p class="know-title">
+    <div class="left-side">
+      <div class="left-side-holder">
+        <div class="know-us-head">GET TO KNOW US</div>
+        <div class="know-us-description">
           Looking for a top-notch Car Service ? Allow us to introduce ourselves.
           We're Ta and our team of pros are available whenever you need us. We
           don't just meet your expectations, we surpass them. Ta serves the
           needs of residents in San Francisco and the surrounding area. Since
           2000, our company has been committed to being the best at what we do.
           See a full list of our services below.
-        </p>
-        <button mat-stroked-button>Learn More</button>
+        </div>
+        <button class="stroked-btn" mat-stroked-button>Learn More</button>
       </div>
     </div>
 
-    <div class="right">
+    <div class="right-side">
       <img
-        class="know-img"
+        class="know-us-img"
         src="https://static.wixstatic.com/media/11062b_7cfa97d11ea642d18cceb20acd796bad~mv2_d_3198_3997_s_4_2.jpg/v1/fill/w_980,h_1240,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_7cfa97d11ea642d18cceb20acd796bad~mv2_d_3198_3997_s_4_2.jpg"
         alt="Not Found"
       />
@@ -95,8 +94,11 @@
       <div class="sub-head">Subscribe Form</div>
       <div class="sub-form">
         <mat-form-field class="sub-field" appearance="fill">
-          <mat-label> E-mail </mat-label>
-          <input matInput formControlName="email" />
+          <input
+            placeholder="e.g., email@example.com"
+            matInput
+            formControlName="email"
+          />
           <mat-error *ngIf="subForm.controls.email.status === 'INVALID'"
             >Wrong Form</mat-error
           >
