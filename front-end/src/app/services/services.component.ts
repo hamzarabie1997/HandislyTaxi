@@ -9,6 +9,8 @@ import { Observable } from 'rxjs';
 })
 export class ServicesComponent implements OnInit {
   services: Observable<any> = this.http.get('/api/services');
+  banner1: Observable<any> = this.http.get('/api/banner-1');
+  banner2: Observable<any> = this.http.get('/api/banner-2');
 
   constructor(private http: HttpClient) {}
 

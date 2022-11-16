@@ -1,26 +1,11 @@
 <div class="services-main">
   <!------------------------------- Banner 1 ------------------------->
-  <div class="banner-holder">
-    <div class="left-side">
-      <img
-        class="img-1"
-        src="https://static.wixstatic.com/media/11062b_8acf8b6c3dbc4970a6f78ba798ea40db~mv2.jpg/v1/fill/w_982,h_680,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_8acf8b6c3dbc4970a6f78ba798ea40db~mv2.jpg"
-        alt="Not Available"
-      />
+  <div class="banner-container">
+    <div class="banner-holder" *ngFor="let banner of banner1 | async">
+      <img class="banner-img" src="{{ banner.img }}" alt="Not Available" />
       <div class="quotes">
-        <div class="top-quote">VIP SERVICE</div>
-        <div class="bottom-quote">Every customer is a VIP</div>
-      </div>
-    </div>
-    <div class="right-side">
-      <img
-        class="img-2"
-        src="https://static.wixstatic.com/media/11062b_d01aae9c05ba4dd4971b28b4424cc9b0~mv2.jpeg/v1/fill/w_978,h_680,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_d01aae9c05ba4dd4971b28b4424cc9b0~mv2.jpeg"
-        alt="Not Available"
-      />
-      <div class="quotes">
-        <div class="top-quote">Private Tours</div>
-        <div class="bottom-quote">Here For Your Every Need</div>
+        <div class="top-quote">{{ banner.head }}</div>
+        <div class="bottom-quote">{{ banner.end }}</div>
       </div>
     </div>
   </div>
@@ -29,29 +14,12 @@
   <div class="space"></div>
 
   <!------------------------------- Banner 2 ------------------------->
-  <div class="banner-holder">
-    <div class="left-side">
-      <img
-        class="img-1"
-        src="https://static.wixstatic.com/media/442c4ba24e7645dc98d823025224070a.jpg/v1/fill/w_978,h_680,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/442c4ba24e7645dc98d823025224070a.jpg"
-        alt="Not Available"
-      />
+  <div class="banner-container">
+    <div class="banner-holder" *ngFor="let banner of banner2 | async">
+      <img class="banner-img" src="{{ banner.img }}" alt="Not Available" />
       <div class="quotes">
-        <div class="top-quote-2">Interstate Bus</div>
-        <div class="bottom-quote-2">Schedules busses that connect areas</div>
-      </div>
-    </div>
-    <div class="right-side">
-      <img
-        class="img-2"
-        src="https://static.wixstatic.com/media/a80096d63aa94b24b64edf3a5a72f8e8.jpg/v1/fill/w_982,h_680,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a80096d63aa94b24b64edf3a5a72f8e8.jpg"
-        alt="Not Available"
-      />
-      <div class="quotes">
-        <div class="top-quote-2">Airport Shuttle</div>
-        <div class="bottom-quote-2">
-          Efficient and friendly airport transportation any time of the day
-        </div>
+        <div class="top-quote-2">{{banner.head}}</div>
+        <div class="bottom-quote-2">{{ banner.end }}</div>
       </div>
     </div>
   </div>
@@ -65,27 +33,32 @@
     <div class="table-title">Book a Service</div>
     <div class="services-container" *ngFor="let service of services | async">
       <mat-divider></mat-divider>
-      <div class="service-object">
-        <div class="service-img">
-          <img src="{{ service.img }}" alt="Not Found" />
-        </div>
-        <div class="service-name">{{ service.name }}</div>
 
-        <div class="info-box">
-          <div class="service-price">
-            {{ service.price }}$ Per {{ service.duration }}
+      <div class="service-object">
+        <div class="left-part">
+          <div class="service-img">
+            <a href=""> <img src="{{ service.img }}" alt="Not Found" /> </a>
           </div>
-          <div class="service-info-link"><a href="">View More Info</a></div>
+          <div class="service-name">
+            <a href="">{{ service.name }}</a>
+          </div>
         </div>
-        <div>
-          <button
-            mat-raised-button
-            class="book-btn"
-            color="primary"
-            type="submit"
-          >
-            Book Now
-          </button>
+
+        <div class="right-part">
+          <div class="info-box">
+            <div class="service-price">Starting at {{ service.price }}$</div>
+            <div class="service-info-link"><a href="">View More Info</a></div>
+          </div>
+          <div class="service-btn">
+            <button
+              mat-raised-button
+              class="book-btn"
+              color="primary"
+              type="submit"
+            >
+              Book Now
+            </button>
+          </div>
         </div>
       </div>
     </div>
