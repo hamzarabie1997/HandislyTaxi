@@ -95,27 +95,25 @@ a:visited {
 
 .mat-divider {
   background-color: #18181833;
-  width: 1000px;
+  width: 940px;
 }
 
 .service-object {
   display: flex;
   justify-content: space-between;
-  width: 1000px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  width: 940px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-.left-part {
+.service-object-left {
   display: flex;
-  align-items: center;
   width: 50%;
 }
 
-.right-part {
+.service-object-right {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   width: 50%;
 }
 
@@ -129,6 +127,11 @@ a:visited {
   opacity: 0.5;
 }
 
+.service-img {
+  width: 84px;
+  height: 84px;
+}
+
 .service-img:hover {
   opacity: 0.5;
 }
@@ -139,18 +142,24 @@ a:visited {
   font-family: $font-family;
 }
 
+.service-duration {
+  font-size: 16px;
+  color: $text-color;
+  font-family: $font-family;
+}
+
 .service-img {
-  margin-right: 60px;
+  margin-right: 35px;
 }
 
 .info-box {
   display: flex;
   flex-direction: column;
+  margin-left: 100px;
 }
 
 .info-box > div {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 /* Button Styling */
@@ -158,11 +167,7 @@ a:visited {
   background-color: $text-color;
   border-radius: 0%;
   width: 150px;
-  height: 40px;
+  height: 35px;
   font-family: $font-family;
   font-size: 16px;
-}
-
-.service-btn {
-  margin-left: 120px;
 }

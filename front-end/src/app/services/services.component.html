@@ -18,7 +18,7 @@
     <div class="banner-holder" *ngFor="let banner of banner2 | async">
       <img class="banner-img" src="{{ banner.img }}" alt="Not Available" />
       <div class="quotes">
-        <div class="top-quote-2">{{banner.head}}</div>
+        <div class="top-quote-2">{{ banner.head }}</div>
         <div class="bottom-quote-2">{{ banner.end }}</div>
       </div>
     </div>
@@ -35,19 +35,25 @@
       <mat-divider></mat-divider>
 
       <div class="service-object">
-        <div class="left-part">
-          <div class="service-img">
-            <a href=""> <img src="{{ service.img }}" alt="Not Found" /> </a>
+        <div class="service-object-left">
+          <div>
+            <a href="">
+              <img
+                class="service-img"
+                src="{{ service.img }}"
+                alt="Not Found"
+              />
+            </a>
           </div>
           <div class="service-name">
             <a href="">{{ service.name }}</a>
           </div>
         </div>
 
-        <div class="right-part">
+        <div class="service-object-right">
           <div class="info-box">
-            <div class="service-price">Starting at {{ service.price }}$</div>
-            <div class="service-info-link"><a href="">View More Info</a></div>
+            <div class="service-duration">{{ service.duration }}</div>
+            <div class="service-price">{{ service.price }}</div>
           </div>
           <div class="service-btn">
             <button
