@@ -1,6 +1,5 @@
+import { ServicesService } from './services.service';
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-services',
@@ -8,11 +7,20 @@ import { Observable } from 'rxjs';
   styleUrls: ['./services.component.scss'],
 })
 export class ServicesComponent implements OnInit {
-  services: Observable<any> = this.http.get('/api/services');
-  banner1: Observable<any> = this.http.get('/api/banner-1');
-  banner2: Observable<any> = this.http.get('/api/banner-2');
+  constructor(private ServicesService: ServicesService) {}
 
-  constructor(private http: HttpClient) {}
+  services: string[] = [];
+  banners: string[] = [];
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.ServicesService.getServices().subscribe((data) => {
+      this.services = data;
+      console.log(this.services);
+    });
+
+    this.ServicesService.getBanner().subscribe((data) => {
+      this.banners = data;
+      console.log(this.banners);
+    });
+  }
 }

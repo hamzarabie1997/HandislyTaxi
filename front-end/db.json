@@ -41,28 +41,26 @@
       "description": "Book your private car to get you to and from your destination in a timely manner. You can book ahead of time or you can book now and wait the earliest available car."
     }
   ],
-  "banner-1": [
+  "banners": [
     {
       "img": "https://static.wixstatic.com/media/11062b_8acf8b6c3dbc4970a6f78ba798ea40db~mv2.jpg/v1/fill/w_982,h_680,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_8acf8b6c3dbc4970a6f78ba798ea40db~mv2.jpg",
       "head": "VIP SERVICE",
-      "end": "Every customer is a VIP"
+      "head-color": "",
+      "head-font": "",
+      "end": "Every customer is a VIP",
+      "end-color": "",
+      "end-font": "",
+      "position": ["flex-start", "center", "flex-end"]
     },
     {
       "img": "https://static.wixstatic.com/media/11062b_d01aae9c05ba4dd4971b28b4424cc9b0~mv2.jpeg/v1/fill/w_978,h_680,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_d01aae9c05ba4dd4971b28b4424cc9b0~mv2.jpeg",
       "head": "Private Tours",
-      "end": "Here For Your Every Need"
-    }
-  ],
-  "banner-2": [
-    {
-      "img": "https://static.wixstatic.com/media/442c4ba24e7645dc98d823025224070a.jpg/v1/fill/w_978,h_680,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/442c4ba24e7645dc98d823025224070a.jpg",
-      "head": "Interstate Bus",
-      "end": "Schedules busses that connect areas"
-    },
-    {
-      "img": "https://static.wixstatic.com/media/a80096d63aa94b24b64edf3a5a72f8e8.jpg/v1/fill/w_982,h_680,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a80096d63aa94b24b64edf3a5a72f8e8.jpg",
-      "head": "Airport Shuttle",
-      "end": "Efficient and friendly airport transportation any time of the day"
+      "head-color": "",
+      "head-font": "",
+      "end": "Here For Your Every Need",
+      "end-color": "",
+      "end-font": "",
+      "position": ["flex-start", "center", "flex-end"]
     }
   ]
 }

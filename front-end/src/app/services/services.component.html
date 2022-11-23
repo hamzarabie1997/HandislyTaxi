@@ -1,11 +1,11 @@
 <div class="services-main">
   <!------------------------------- Banner 1 ------------------------->
   <div class="banner-container">
-    <div class="banner-holder" *ngFor="let banner of banner1 | async">
-      <img class="banner-img" src="{{ banner.img }}" alt="Not Available" />
+    <div class="banner-holder" *ngFor="let banner of banners">
+      <img class="banner-img" src="{{ banner['img'] }}" alt="Not Available" />
       <div class="quotes">
-        <div class="top-quote">{{ banner.head }}</div>
-        <div class="bottom-quote">{{ banner.end }}</div>
+        <div class="top-quote">{{ banner['head'] }}</div>
+        <div class="bottom-quote">{{ banner['end'] }}</div>
       </div>
     </div>
   </div>
@@ -14,15 +14,6 @@
   <div class="space"></div>
 
   <!------------------------------- Banner 2 ------------------------->
-  <div class="banner-container">
-    <div class="banner-holder" *ngFor="let banner of banner2 | async">
-      <img class="banner-img" src="{{ banner.img }}" alt="Not Available" />
-      <div class="quotes">
-        <div class="top-quote-2">{{ banner.head }}</div>
-        <div class="bottom-quote-2">{{ banner.end }}</div>
-      </div>
-    </div>
-  </div>
 
   <!------------------------------- White Space ------------------------->
   <div class="space"></div>
@@ -31,7 +22,7 @@
   <!------------------------------- Services Table ------------------------->
   <div class="table-container">
     <div class="table-title">Book a Service</div>
-    <div class="services-container" *ngFor="let service of services | async">
+    <div class="services-container" *ngFor="let service of services">
       <mat-divider></mat-divider>
 
       <div class="service-object">
@@ -40,20 +31,20 @@
             <a href="">
               <img
                 class="service-img"
-                src="{{ service.img }}"
+                src="{{ service['img'] }}"
                 alt="Not Found"
               />
             </a>
           </div>
           <div class="service-name">
-            <a href="">{{ service.name }}</a>
+            <a href="">{{ service['name'] }}</a>
           </div>
         </div>
 
         <div class="service-object-right">
           <div class="info-box">
-            <div class="service-duration">{{ service.duration }}</div>
-            <div class="service-price">{{ service.price }}</div>
+            <div class="service-duration">{{ service['duration'] }}</div>
+            <div class="service-price">{{ service['price'] }}</div>
           </div>
           <div class="service-btn">
             <button
