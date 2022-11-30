@@ -11,16 +11,26 @@ export class ServicesComponent implements OnInit {
 
   services: string[] = [];
   banners: string[] = [];
+  styles: string[] = [];
+  newposition = '';
+  greenColor = '';
+  whiteColor = '';
+  yellowColor = '';
 
   ngOnInit(): void {
     this.ServicesService.getServices().subscribe((data) => {
       this.services = data;
-      console.log(this.services);
     });
-
     this.ServicesService.getBanner().subscribe((data) => {
       this.banners = data;
-      console.log(this.banners);
+    });
+
+    this.ServicesService.getStyles().subscribe((data) => {
+      this.styles = data;
+      this.newposition = this.styles['position-top'];
+      this.greenColor = this.styles['color-green'];
+      this.whiteColor = this.styles['color-white'];
+      this.yellowColor = this.styles['color-yellow'];
     });
   }
 }

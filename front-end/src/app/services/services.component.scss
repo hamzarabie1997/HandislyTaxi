@@ -34,8 +34,29 @@
   z-index: 5;
 }
 
-.top-quote {
+.quotes-up {
+  justify-content: flex-start;
+}
+.quotes-center {
+  justify-content: center;
+}
+.quotes-down {
+  justify-content: flex-end;
+}
+
+.color-green {
   color: $text-color;
+}
+
+.color-white {
+  color: $text-white;
+}
+
+.color-yellow {
+  color: #ffd97a;
+}
+
+.top-quote {
   font-family: $font-family;
   font-size: 24px;
   margin-bottom: 20px;
@@ -43,23 +64,9 @@
 }
 
 .bottom-quote {
-  color: $text-white;
   font-family: $font-family;
   font-size: 20px;
   padding-bottom: 20px;
-}
-
-.top-quote-2 {
-  color: $text-white;
-  font-family: $font-family;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.bottom-quote-2 {
-  color: #ffd97a;
-  font-family: $font-family;
-  font-size: 20px;
 }
 
 // ************* White Space **************** //

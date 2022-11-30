@@ -17,4 +17,8 @@ export class ServicesService {
   getBanner(): Observable<any> {
     return this.http.get(this.url + '/banners');
   }
+
+  getStyles(): Observable<any> {
+    return this.http.get(this.url + '/styles');
+  }
 }

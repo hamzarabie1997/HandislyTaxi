@@ -3,17 +3,12 @@
   <div class="banner-container">
     <div class="banner-holder" *ngFor="let banner of banners">
       <img class="banner-img" src="{{ banner['img'] }}" alt="Not Available" />
-      <div class="quotes">
-        <div class="top-quote">{{ banner['head'] }}</div>
-        <div class="bottom-quote">{{ banner['end'] }}</div>
+      <div  [class]="'quotes-' + newposition" class="quotes">
+        <div [class]="this.banner['flag'] == false ? 'color-'+ whiteColor : 'color-' + greenColor" class="top-quote">{{ banner['head'] }}</div>
+        <div [class]="this.banner['flag'] == false ? 'color-'+ yellowColor : 'color-' + whiteColor" class="bottom-quote">{{ banner['end'] }}</div>
       </div>
     </div>
   </div>
-
-  <!------------------------------- White Space ------------------------->
-  <div class="space"></div>
-
-  <!------------------------------- Banner 2 ------------------------->
 
   <!------------------------------- White Space ------------------------->
   <div class="space"></div>
