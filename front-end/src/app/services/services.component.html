@@ -3,9 +3,9 @@
   <div class="banner-container">
     <div class="banner-holder" *ngFor="let banner of banners">
       <img class="banner-img" src="{{ banner['img'] }}" alt="Not Available" />
-      <div  [class]="'quotes-' + newposition" class="quotes">
-        <div [class]="this.banner['flag'] == false ? 'color-'+ whiteColor : 'color-' + greenColor" class="top-quote">{{ banner['head'] }}</div>
-        <div [class]="this.banner['flag'] == false ? 'color-'+ yellowColor : 'color-' + whiteColor" class="bottom-quote">{{ banner['end'] }}</div>
+      <div  [class]="'quotes-' + this.banner['position']" class="quotes">
+        <div [class]="'color-' + this.banner['color-head']" class="top-quote">{{ banner['head'] }}</div>
+        <div [class]="'color-' + this.banner['color-end']" class="bottom-quote">{{ banner['end'] }}</div>
       </div>
     </div>
   </div>
@@ -19,11 +19,10 @@
     <div class="table-title">Book a Service</div>
     <div class="services-container" *ngFor="let service of services">
       <mat-divider></mat-divider>
-
       <div class="service-object">
         <div class="service-object-left">
           <div>
-            <a href="">
+            <a href="" class="link-handler">
               <img
                 class="service-img"
                 src="{{ service['img'] }}"
@@ -32,7 +31,7 @@
             </a>
           </div>
           <div class="service-name">
-            <a href="">{{ service['name'] }}</a>
+            <a href="" class="link-handler">{{ service['name'] }}</a>
           </div>
         </div>
 
