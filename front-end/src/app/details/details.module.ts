@@ -1,23 +1,23 @@
-import { ServicesComponent } from './services.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DetailsComponent } from './details.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatDividerModule } from '@angular/material/divider';
 import { RouterModule } from '@angular/router';
 
+
 @NgModule({
-  declarations: [ServicesComponent],
+  declarations: [DetailsComponent],
   imports: [
     CommonModule,
     MatButtonModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatFormFieldModule,
     MatDividerModule,
     RouterModule,
   ],
+  exports: [DetailsComponent],
 })
-export class ServicesModule {}
+export class DetailsModule {}

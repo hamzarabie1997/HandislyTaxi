@@ -1,20 +1,28 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ServicesService {
-  url = 'http://localhost:3000';
-
+  test = 'Working Test';
   constructor(private http: HttpClient) {}
 
-  getServices(): Observable<any> {
-    return this.http.get(this.url + '/services');
+  httpGet(url) {
+    return this.http.get(url);
   }
 
-  getBanner(): Observable<any> {
-    return this.http.get(this.url + '/banners');
+  httpPost(url, {}) {
+    return this.http.post(url, { name: 'Hamza' });
+  }
+
+  getServices(url) {
+    return this.http.get(url);
+  }
+
+  getBanners(url) {
+    return this.http.get(url);
   }
 }

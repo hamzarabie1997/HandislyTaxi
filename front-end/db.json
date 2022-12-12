@@ -5,6 +5,8 @@
       "availability": true,
       "duration": "30 min",
       "price": "Starting at 3$",
+      "pick-up":"Customer's Place",
+      "drop-off":"",
       "img": "https://static.wixstatic.com/media/f1f4ee0090a541ffb13d5ca415956608.jpg/v1/fill/w_168,h_168,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/f1f4ee0090a541ffb13d5ca415956608.jpg",
       "description": "Book your private car to get you to and from your destination in a timely manner. You can book ahead of time or you can book now and wait the earliest available car."
     },
@@ -13,6 +15,8 @@
       "availability": true,
       "duration": "1 hr",
       "price": "$50",
+      "pick-up": "Customer's Place",
+      "drop-off": "",
       "img": "https://static.wixstatic.com/media/11062b_88ddb6a37fa3462283461158404d9d66~mv2.jpg/v1/fill/w_168,h_168,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_88ddb6a37fa3462283461158404d9d66~mv2.jpg",
       "description": "Book you car to take you to and from the airport with all your luggage"
     },
@@ -21,6 +25,8 @@
       "availability": true,
       "duration": "1 day",
       "price": "$25",
+      "pick-up": "Customer's Place",
+      "drop-off": "",
       "img": "https://static.wixstatic.com/media/11062b_4b72164c5e6040ac97ab7cf44f0e1aac~mv2.jpeg/v1/fill/w_168,h_168,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_4b72164c5e6040ac97ab7cf44f0e1aac~mv2.jpeg",
       "description": "Book your private car to get you to and from your destination in a timely manner. You can book ahead of time or you can book now and wait the earliest available car."
     },
@@ -29,6 +35,8 @@
       "availability": true,
       "duration": "1 hr",
       "price": "$20",
+      "pick-up": "Customer's Place",
+      "drop-off": "",
       "img": "https://static.wixstatic.com/media/11062b_38728c97f4e3444287d5ca79078d911a~mv2_d_4896_3264_s_4_2.jpg/v1/fill/w_168,h_168,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_38728c97f4e3444287d5ca79078d911a~mv2_d_4896_3264_s_4_2.jpg",
       "description": "Book your private car to get you to and from your destination in a timely manner. You can book ahead of time or you can book now and wait the earliest available car."
     },
@@ -37,6 +45,8 @@
       "availability": true,
       "duration": "14 hr",
       "price": "$150",
+      "pick-up": "Customer's Place",
+      "drop-off": "",
       "img": "https://static.wixstatic.com/media/11062b_4b72164c5e6040ac97ab7cf44f0e1aac~mv2.jpeg/v1/fill/w_168,h_168,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_4b72164c5e6040ac97ab7cf44f0e1aac~mv2.jpeg",
       "description": "Book your private car to get you to and from your destination in a timely manner. You can book ahead of time or you can book now and wait the earliest available car."
     }

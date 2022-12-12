@@ -1,5 +1,6 @@
 import { ServicesService } from './services.service';
 import { Component, OnInit } from '@angular/core';
+import { TransferService } from '../transfer.service';
 
 @Component({
   selector: 'app-services',
@@ -7,17 +8,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./services.component.scss'],
 })
 export class ServicesComponent implements OnInit {
-  constructor(private ServicesService: ServicesService) {}
+  constructor(public http: ServicesService, private data: TransferService) {}
 
-  services: string[] = [];
-  banners: string[] = [];
+  services: any;
+  banners: any;
+  found = [];
 
+  update(serImg, serName, serDuration, serPrice, serDesc, serPick) {
+    this.found.push(serImg, serName, serDuration, serPrice, serDesc, serPick);
+    this.data.updateData(this.found);
+  }
   ngOnInit(): void {
-    this.ServicesService.getServices().subscribe((data) => {
-      this.services = data;
-    });
-    this.ServicesService.getBanner().subscribe((data) => {
-      this.banners = data;
+    this.http.getServices('http://localhost:3000/backend').subscribe({
+      next: (data) => {
+        this.services = data;
+        console.log(this.services);
+      },
+      error: (err) => {
+        console.log(err);
+      },
     });
   }
 }

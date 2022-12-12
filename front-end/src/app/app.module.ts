@@ -12,6 +12,7 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { ContactModule } from './contact/contact.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeModule } from './home/home.module';
+import { DetailsModule } from './details/details.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,6 +31,7 @@ import { HomeModule } from './home/home.module';
     ContactModule,
     HttpClientModule,
     HomeModule,
+    DetailsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

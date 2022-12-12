@@ -1,0 +1,78 @@
+@import "./../../assets/variables.scss";
+
+.details-page-container {
+  display: flex;
+  justify-content: center;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 57%;
+  align-items: center;
+  div {
+    align-self: flex-start;
+  }
+}
+
+.details-head {
+  font-size: 40px;
+  font-family: $font-family;
+  color: $text-color;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.info-holder {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 35px;
+  div {
+    border: 1px solid rgba(42, 124, 111, 0.2);
+    padding: 20px;
+    font-size: 16px;
+    font-family: $font-family;
+    color: $banner-green;
+  }
+  .details-price {
+    border-left: 0px;
+    border-right: 0px;
+  }
+}
+
+.booking-button {
+  margin-bottom: 35px;
+}
+
+.text-title {
+  margin-top: 40px;
+  font-size: 20px;
+  font-family: $font-family;
+  color: $text-color;
+  margin-bottom: 25px;
+}
+
+.details-description {
+  font-size: 16px;
+  font-family: $font-family;
+  color: $text-color;
+}
+
+.mat-divider {
+  background-color: rgba(42, 124, 111, 0.2);
+  width: 100%;
+}
+
+.mat-raised-button.details-book-btn.mat-primary {
+  background-color: $text-color;
+  border-radius: 0%;
+  width: 150px;
+  height: 35px;
+  font-family: $font-family;
+  font-size: 16px;
+}
+
+.mat-raised-button.details-book-btn.mat-primary:hover {
+  opacity: 0.5;
+}

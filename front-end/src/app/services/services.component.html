@@ -3,9 +3,13 @@
   <div class="banner-container">
     <div class="banner-holder" *ngFor="let banner of banners">
       <img class="banner-img" src="{{ banner['img'] }}" alt="Not Available" />
-      <div  [class]="'quotes-' + this.banner['position']" class="quotes">
-        <div [class]="'color-' + this.banner['color-head']" class="top-quote">{{ banner['head'] }}</div>
-        <div [class]="'color-' + this.banner['color-end']" class="bottom-quote">{{ banner['end'] }}</div>
+      <div [class]="'quotes-' + this.banner['position']" class="quotes">
+        <div [class]="'color-' + this.banner['color-head']" class="top-quote">
+          {{ banner["head"]['S'] }}
+        </div>
+        <div [class]="'color-' + this.banner['color-end']" class="bottom-quote">
+          {{ banner["end"] }}
+        </div>
       </div>
     </div>
   </div>
@@ -22,23 +26,37 @@
       <div class="service-object">
         <div class="service-object-left">
           <div>
-            <a href="" class="link-handler">
+            <a href="#" class="link-handler">
               <img
                 class="service-img"
-                src="{{ service['img'] }}"
+                src="{{ service['img']['S'] }}"
                 alt="Not Found"
               />
             </a>
           </div>
           <div class="service-name">
-            <a href="" class="link-handler">{{ service['name'] }}</a>
+            <a
+              (click)="
+                update(
+                  service['img']['S'],
+                  service['name']['S'],
+                  service['duration']['S'],
+                  service['price']['S'],
+                  service['description']['S'],
+                  service['pick-up']['S']
+                )
+              "
+              class="link-handler"
+              [routerLink]="'/details'"
+              >{{ service["name"]["S"] }}</a
+            >
           </div>
         </div>
 
         <div class="service-object-right">
           <div class="info-box">
-            <div class="service-duration">{{ service['duration'] }}</div>
-            <div class="service-price">{{ service['price'] }}</div>
+            <div class="service-duration">{{ service["duration"]["S"] }}</div>
+            <div class="service-price">{{ service["price"]["S"] }}</div>
           </div>
           <div class="service-btn">
             <button
