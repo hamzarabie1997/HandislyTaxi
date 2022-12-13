@@ -22,7 +22,7 @@
   object-fit: cover;
 }
 
-.quotes {
+.quotes-holder {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -180,7 +180,7 @@
 .mat-raised-button.book-btn.mat-primary {
   background-color: $text-color;
   border-radius: 0%;
-  width: 150px;
+  width: 130px;
   height: 35px;
   font-family: $font-family;
   font-size: 16px;

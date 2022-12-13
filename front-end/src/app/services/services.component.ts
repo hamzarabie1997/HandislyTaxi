@@ -14,18 +14,32 @@ export class ServicesComponent implements OnInit {
   banners: any;
   found = [];
 
-  update(serImg, serName, serDuration, serPrice, serDesc, serPick) {
-    this.found.push(serImg, serName, serDuration, serPrice, serDesc, serPick);
+  update(
+    serviceImg,
+    serviceName,
+    serviceDuration,
+    servicePrice,
+    serDesc,
+    servicePick
+  ) {
+    this.found.push(
+      serviceImg,
+      serviceName,
+      serviceDuration,
+      servicePrice,
+      serDesc,
+      servicePick
+    );
     this.data.updateData(this.found);
   }
   ngOnInit(): void {
-    this.http.getServices('http://localhost:3000/backend').subscribe({
+    this.http.getData('http://localhost:3000/backend').subscribe({
       next: (data) => {
-        this.services = data;
-        console.log(this.services);
+        this.banners = data[0];
+        this.services = data[1];
       },
       error: (err) => {
-        console.log(err);
+        throw err;
       },
     });
   }

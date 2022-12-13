@@ -1,5 +1,3 @@
-const attr = require("dynamodb-data-types").AttributeValue;
-
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -29,27 +27,24 @@ app.get("/", (req, res) => {
 
 app.get("/backend", async (req, res) => {
   try {
-    const services = await getServices();
-    res.json(services);
+    const combined = await getServices();
+    res.json(combined);
   } catch (err) {
     console.error(err);
     res.status(500).json({ err: "Something went wrong" });
   }
 });
 
-
+all = [];
 const getServices = async () => {
   const params = {
     TableName: "Services",
   };
-  const services = await dynamodb.scan(params).promise();
-  return services.Items;
-};
-
-const getBanners = async () => {
-  const params = {
+  const params2 = {
     TableName: "Banners",
   };
-  const banners = await dynamodb.scan(params).promise();
-  return banners.Items;
+  const services = await dynamodb.scan(params).promise();
+  const banners = await dynamodb.scan(params2).promise();
+  all.push(banners.Items, services.Items);
+  return all;
 };
