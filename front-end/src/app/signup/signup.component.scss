@@ -1,0 +1,124 @@
+@import "./../../assets/variables.scss";
+
+.signup-page-container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-text {
+  color: $text-color;
+  font-family: $font-family;
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.member-question-container {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.member-question {
+  font-family: $font-family;
+  font-size: 18px;
+  margin-right: 5px;
+  color: $text-color;
+}
+
+.member-question-link {
+  font-family: $font-family;
+  font-size: 18px;
+  color: $text-color;
+  text-decoration: none;
+}
+.fb-btn {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+
+.fb-logo {
+  margin-right: 50px;
+}
+
+.mat-raised-button.fb-btn {
+  background-color: #3b5998;
+  border-radius: 0%;
+  font-family: $font-family;
+  font-size: 16px;
+  width: 320px;
+  height: 40px;
+}
+
+.mat-raised-button.fb-btn.mat-primary:hover {
+  opacity: 0.8;
+}
+
+.google-btn {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+
+.google-logo {
+  margin-right: 50px;
+}
+
+.mat-raised-button.google-btn {
+  background-color: #4285f4;
+  border-radius: 0%;
+  font-family: $font-family;
+  font-size: 16px;
+  width: 320px;
+  height: 40px;
+}
+
+.mat-raised-button.google-btn.mat-primary:hover {
+  opacity: 0.8;
+}
+
+.mat-raised-button.email-btn {
+  background-color: white;
+  border-radius: 0%;
+  font-family: $font-family;
+  font-size: 16px;
+  width: 320px;
+  height: 40px;
+  color: $text-color;
+  border: solid 1px rgb(174, 229, 65);
+}
+
+.mat-raised-button.email-btn.mat-primary:hover {
+  opacity: 0.8;
+}
+
+.or-divider {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.or-text {
+  margin-right: 15px;
+  margin-left: 15px;
+  color: $text-color;
+}
+
+.mat-divider.lime-divider {
+  width: 140px;
+  background-color: rgb(174, 229, 65);
+}
+
+.mat-divider.lime-divider {
+  width: 140px;
+  background-color: rgb(174, 229, 65);
+}

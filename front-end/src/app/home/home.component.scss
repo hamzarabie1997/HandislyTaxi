@@ -51,17 +51,17 @@ hr {
   margin-top: 30px;
 }
 
-a {
+.button-link {
   display: inline-block;
   background-color: $banner-green;
   color: $text-white;
   padding-bottom: 10px;
 }
-a:link {
+.button-link:link {
   text-decoration: none;
 }
 
-a:hover {
+.button-link:hover {
   border-bottom: 2px solid white;
 }
 

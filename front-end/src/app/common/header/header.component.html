@@ -1,9 +1,20 @@
-<div class="header-title">
-    Handisly Taxi
+<div class="header-title">Handisly Taxi</div>
+<div class="header-login">
+  <div class="login-icon-container">
+    <a
+      ><img class="login-icon" [routerLink]="'/signup'" src="../../../assets/login.svg" alt=""
+    /></a>
+  </div>
+  <div><a class="login-text" [routerLink]="'/signup'">Log In</a></div>
 </div>
 <div class="header-menu">
-    <div class="nav" *ngFor="let item of menuItems; let i = index;" [ngClass]="{'currentPage': item === currentSelection }"
-        class="header-option" (click)="navigateTo(i)">
-        {{item}}
-    </div>
+  <div
+    class="nav"
+    *ngFor="let item of menuItems; let i = index"
+    [ngClass]="{ currentPage: item === currentSelection }"
+    class="header-option"
+    (click)="navigateTo(i)"
+  >
+    {{ item }}
+  </div>
 </div>

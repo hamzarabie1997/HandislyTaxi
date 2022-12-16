@@ -13,7 +13,8 @@ import { ContactModule } from './contact/contact.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeModule } from './home/home.module';
 import { DetailsModule } from './details/details.module';
-
+import { SignupModule } from './signup/signup.module';
+import { LoginModule } from './login/login.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -32,6 +33,8 @@ import { DetailsModule } from './details/details.module';
     HttpClientModule,
     HomeModule,
     DetailsModule,
+    SignupModule,
+    LoginModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

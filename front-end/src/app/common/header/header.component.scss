@@ -22,7 +22,7 @@
   top: 0;
   z-index: 1;
   div {
-    padding-right: 30px;
+    padding-right: 20px;
   }
 
   .header-option {
@@ -34,4 +34,21 @@
       opacity: 0.5;
     }
   }
+}
+
+.header-login {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 155px;
+  div {
+    margin-right: 15px;
+  }
+}
+
+
+.login-text {
+  font-size: 18px;
+  font-family: $font-family;
+  color: $text-color;
+  text-decoration: none;
 }
