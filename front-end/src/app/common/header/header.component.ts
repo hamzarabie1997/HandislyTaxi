@@ -1,5 +1,11 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { SignupComponent } from './../../signup/signup.component';
+import {
+  MatDialog,
+  MatDialogConfig,
+  MatDialogModule,
+} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-header',
@@ -20,8 +26,17 @@ export class HeaderComponent implements OnInit {
     'Plans and Pricing',
   ];
   menuPaths = ['', 'services', 'contact'];
-  constructor(private router: Router) {}
-
+  constructor(private router: Router, private dialog: MatDialog) {}
+  openDialog() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.maxWidth = '100vw';
+    dialogConfig.maxHeight = '100vh';
+    dialogConfig.height = '100%';
+    dialogConfig.width = '100%';
+    dialogConfig.enterAnimationDuration = '0ms';
+    dialogConfig.exitAnimationDuration = '0ms';
+    this.dialog.open(SignupComponent, dialogConfig);
+  }
   ngOnInit(): void {}
 
   navigateTo(index: number) {

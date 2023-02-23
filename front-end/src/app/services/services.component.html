@@ -2,13 +2,26 @@
   <!------------------------------- Banner 1 ------------------------->
   <div class="banner-container">
     <div class="banner-holder" *ngFor="let banner of banners">
-      <img class="banner-img" src="{{ banner['img']['S'] }}" alt="Not Available" />
-      <div [class]="'quotes-' + this.banner['position']['S']" class="quotes-holder">
-        <div [class]="'color-' + this.banner['color-head']['S']" class="top-quote">
-          {{ banner["head"]['S'] }}
+      <img
+        class="banner-img"
+        src="{{ banner['img']['S'] }}"
+        alt="Not Available"
+      />
+      <div
+        [class]="'quotes-' + this.banner['position']['S']"
+        class="quotes-holder"
+      >
+        <div
+          [class]="'color-' + this.banner['color-head']['S']"
+          class="top-quote"
+        >
+          {{ banner["head"]["S"] }}
         </div>
-        <div [class]="'color-' + this.banner['color-end']['S']" class="bottom-quote">
-          {{ banner["end"]['S'] }}
+        <div
+          [class]="'color-' + this.banner['color-end']['S']"
+          class="bottom-quote"
+        >
+          {{ banner["end"]["S"] }}
         </div>
       </div>
     </div>

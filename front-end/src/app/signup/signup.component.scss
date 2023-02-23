@@ -5,6 +5,7 @@
   height: 100%;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
 }
 
 .signup-form {
@@ -17,89 +18,92 @@
   color: $text-color;
   font-family: $font-family;
   font-size: 48px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
-.member-question-container {
+.signup-question-container {
   display: flex;
   margin-bottom: 40px;
 }
 
-.member-question {
+.signup-question {
   font-family: $font-family;
   font-size: 18px;
   margin-right: 5px;
   color: $text-color;
 }
 
-.member-question-link {
+.signup-question-link {
   font-family: $font-family;
   font-size: 18px;
   color: $text-color;
   text-decoration: none;
 }
-.fb-btn {
+.signup-fb-btn {
   display: flex;
   justify-content: flex-start;
   margin-bottom: 15px;
 }
 
-.fb-logo {
+.signup-fb-logo {
   margin-right: 50px;
 }
 
-.mat-raised-button.fb-btn {
+.mat-raised-button.signup-fb-btn {
   background-color: #3b5998;
   border-radius: 0%;
   font-family: $font-family;
   font-size: 16px;
   width: 320px;
   height: 40px;
+  box-shadow: none !important;
 }
 
-.mat-raised-button.fb-btn.mat-primary:hover {
+.mat-raised-button.signup-fb-btn.mat-primary:hover {
   opacity: 0.8;
 }
 
-.google-btn {
+.signup-google-btn {
   display: flex;
   justify-content: flex-start;
   margin-bottom: 15px;
 }
 
-.google-logo {
+.signup-google-logo {
   margin-right: 50px;
 }
 
-.mat-raised-button.google-btn {
+.mat-raised-button.signup-google-btn {
   background-color: #4285f4;
   border-radius: 0%;
   font-family: $font-family;
   font-size: 16px;
   width: 320px;
   height: 40px;
+  box-shadow: none !important;
 }
 
-.mat-raised-button.google-btn.mat-primary:hover {
+.mat-raised-button.signup-google-btn.mat-primary:hover {
   opacity: 0.8;
 }
 
-.mat-raised-button.email-btn {
+.mat-raised-button.signup-email-btn {
   background-color: white;
   border-radius: 0%;
-  font-family: $font-family;
   font-size: 16px;
   width: 320px;
   height: 40px;
   color: $text-color;
-  border: solid 1px rgb(174, 229, 65);
+  border: solid 1px $lime-color;
+  text-decoration: none;
+  box-shadow: none !important;
 }
 
-.mat-raised-button.email-btn.mat-primary:hover {
-  opacity: 0.8;
+.mat-raised-button.signup-email-btn.mat-primary:hover {
+  border: 1px $text-color solid;
 }
 
-.or-divider {
+.signup-or-divider {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -107,18 +111,38 @@
   margin-bottom: 25px;
 }
 
-.or-text {
+.signup-or-text {
   margin-right: 15px;
   margin-left: 15px;
   color: $text-color;
 }
 
-.mat-divider.lime-divider {
+.mat-divider.signup-lime-divider {
   width: 140px;
-  background-color: rgb(174, 229, 65);
+  background-color: $lime-color;
 }
 
-.mat-divider.lime-divider {
+.mat-divider.signup-lime-divider {
   width: 140px;
-  background-color: rgb(174, 229, 65);
+  background-color: $lime-color;
+}
+
+.signup-close-icon {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding-top: 35px;
+}
+
+.signup-x-icon {
+  color: $text-color;
+  width: 30px;
+  height: 25px;
+  margin-right: 20px;
+}
+.signup-dialog-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

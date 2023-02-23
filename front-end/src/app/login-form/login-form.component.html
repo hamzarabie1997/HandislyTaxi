@@ -1,0 +1,55 @@
+<mat-dialog-content class="login-form-dialog-content">
+  <div class="login-form-close-icon">
+    <a class="login-form-x-icon" [mat-dialog-close]="true">
+      <mat-icon>close</mat-icon>
+    </a>
+  </div>
+  <div class="login-form-page-container">
+    <div class="login-form-upper-part">
+      <div class="login-form-text">Log In</div>
+      <div class="login-form-question-container">
+        <div class="login-form-question">New to this site?</div>
+        <div class="login-form-question-button">
+          <a
+            class="login-form-question-link"
+            (click)="openDialog()"
+            [mat-dialog-close]="true"
+            >Sign Up</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="login-form-fields-container">
+      <div class="login-form-field-text">Email</div>
+      <mat-form-field class="login-form-input-field" appearance="fill">
+        <input matInput />
+      </mat-form-field>
+      <div class="login-form-field-text">Password</div>
+      <mat-form-field class="login-form-input-field" appearance="fill">
+        <input matInput />
+      </mat-form-field>
+      <div class="login-form-forgot-container">
+        <a class="login-form-forgot-link" href="">Forgot password?</a>
+      </div>
+      <button mat-raised-button class="login-form-submit-btn" color="primary">
+        Log In
+      </button>
+      <div class="login-form-or-divider">
+        <mat-divider class="login-form-lime-divider"></mat-divider>
+        <div class="login-form-or-text">or log in with</div>
+        <mat-divider class="login-form-lime-divider"></mat-divider>
+      </div>
+      <div class="svg-container">
+        <a
+          ><img class="login-form-fb-icon" src="../../assets/fb-log.svg" alt=""
+        /></a>
+        <a
+          ><img
+            class="login-form-google-icon"
+            src="../../assets/google.svg"
+            alt=""
+        /></a>
+      </div>
+    </div>
+  </div>
+</mat-dialog-content>

@@ -1,0 +1,202 @@
+@import "./../../assets/variables.scss";
+
+////////// Start X Icon //////////
+.signup-form-close-icon {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding-top: 35px;
+}
+
+.signup-form-x-icon {
+  color: $text-color;
+  width: 30px;
+  height: 25px;
+  margin-right: 20px;
+}
+////////// End X Icon //////////
+
+//--------------------------------------//
+
+////////// Start Page Styles //////////
+.mat-dialog-content.signup-form-dialog-content {
+  max-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-form-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+////////// End Page Styles //////////
+
+//--------------------------------------//
+
+////////// Start Upper Part Styles //////////
+.signup-form-upper-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-form-text {
+  color: $text-color;
+  font-family: $font-family;
+  font-size: 48px;
+  margin-bottom: 35px;
+}
+
+.signup-form-question-container {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.signup-form-question {
+  font-family: $font-family;
+  font-size: 18px;
+  margin-right: 5px;
+  color: $text-color;
+}
+
+.signup-form-question-link {
+  font-family: $font-family;
+  font-size: 18px;
+  color: $text-color;
+  text-decoration: none;
+}
+////////// End Upper Part Styles //////////
+
+//--------------------------------------//
+
+////////// Start Form Styles //////////
+.signup-form-fields-container {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+}
+.signup-form-field-text {
+  z-index: 1;
+  color: $lime-color;
+  font-family: $font-family;
+  font-size: 18px;
+}
+.mat-form-field.signup-form-input-field {
+  margin-top: -15px;
+  .mat-form-field-wrapper {
+    .mat-form-field-flex {
+      margin-left: -10.5px;
+      background-color: white;
+    }
+    .mat-form-field-underline::before {
+      background-color: $lime-color;
+    }
+    .mat-form-field-ripple {
+      height: 1px;
+      background-color: $text-color;
+    }
+    .mat-input-element {
+      caret-color: $text-color;
+      height: 20px;
+    }
+  }
+}
+////////// End Form Styles //////////
+
+//--------------------------------------//
+
+////////// Start Login button Styles //////////
+
+.mat-raised-button.signup-form-submit-btn {
+  box-shadow: none !important;
+  .mat-button-ripple {
+    height: 0px;
+  }
+  background-color: $text-color;
+  border-radius: 0%;
+  font-size: 16px;
+  width: 100%;
+  height: 50px;
+  color: $lime-color;
+}
+
+.mat-raised-button.signup-form-submit-btn.mat-primary:hover {
+  color: white;
+}
+
+////////// End Login button Styles //////////
+
+//--------------------------------------//
+
+////////// Start Forgot Link Styles //////////
+
+.signup-form-forgot-container {
+  margin-top: 13px;
+  margin-bottom: 18px;
+}
+
+.signup-form-forgot-link {
+  color: $text-color;
+  font-family: $font-family;
+  font-size: 16px;
+}
+
+.signup-form-forgot-link:visited {
+  color: $text-color;
+}
+////////// End Forgot Link Styles //////////
+
+//--------------------------------------//
+
+////////// Start divider Styles //////////
+.signup-form-or-divider {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 45px;
+  margin-bottom: 30px;
+}
+
+.mat-divider.signup-form-lime-divider {
+  width: 95px;
+  background-color: $lime-color;
+}
+
+.signup-form-or-text {
+  margin-right: 15px;
+  margin-left: 15px;
+  color: $text-color;
+  font-family: $font-family;
+  font-size: 16px;
+}
+////////// End divider Styles //////////
+
+//--------------------------------------//
+
+////////// Start Icons Styles //////////
+.svg-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.signup-form-fb-icon {
+  margin-right: 15px;
+}
+.signup-form-google-icon {
+  margin-left: 15px;
+}
+
+////////// End Icons Styles //////////
+
+.recaptcha-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

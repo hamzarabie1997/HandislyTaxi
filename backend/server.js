@@ -7,8 +7,8 @@ var AWS = require("aws-sdk");
 let awsConfig = {
   region: "us-east-1",
   endpoint: "http://dynamodb.us-east-1.amazonaws.com",
-  accessKeyId: "AKIAVLKH2DQYSEJIBHXU",
-  secretAccessKey: "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",
+  accessKeyId: "",
+  secretAccessKey: "",
 };
 
 var dynamodb = new AWS.DynamoDB(awsConfig);
@@ -42,7 +42,7 @@ async function sendMail(user, callback) {
     secure: false,
     auth: {
       user: "hamza.rabie1997@gmail.com",
-      pass: "jzbtsmotbgxsuuid",
+      pass: "",
     },
   });
 
@@ -85,7 +85,7 @@ async function sendMail(user, callback) {
         address: { S: input.address },
         message: { S: input.message },
         name: { S: input.name },
-        phone: {S: input.phone },
+        phone: { S: input.phone },
         subject: { S: input.subject },
       },
     };

@@ -1,0 +1,61 @@
+<mat-dialog-content class="signup-form-dialog-content">
+  <div class="signup-form-close-icon">
+    <a class="signup-form-x-icon" [mat-dialog-close]="true">
+      <mat-icon>close</mat-icon>
+    </a>
+  </div>
+  <div class="signup-form-page-container">
+    <div class="signup-form-upper-part">
+      <div class="signup-form-text">Sign Up</div>
+      <div class="signup-form-question-container">
+        <div class="signup-form-question">Already a member?</div>
+        <div class="signup-form-question-button">
+          <a
+            class="signup-form-question-link"
+            (click)="openDialog()"
+            [mat-dialog-close]="true"
+            >Login</a
+          >
+        </div>
+      </div>
+    </div>
+    <form class="signup-form-fields-container" [formGroup]="signupForm">
+      <div class="signup-form-field-text">Email</div>
+      <mat-form-field class="signup-form-input-field" appearance="fill">
+        <input matInput />
+      </mat-form-field>
+      <div class="signup-form-field-text">Password</div>
+      <mat-form-field class="signup-form-input-field" appearance="fill">
+        <input matInput />
+      </mat-form-field>
+      <div class="recaptcha-container">
+      </div>
+      <button
+        mat-raised-button
+        class="signup-form-submit-btn"
+        color="primary"
+      >
+        Log In
+      </button>
+      <div class="signup-form-or-divider">
+        <mat-divider class="signup-form-lime-divider"></mat-divider>
+        <div class="signup-form-or-text">or sign up with</div>
+        <mat-divider class="signup-form-lime-divider"></mat-divider>
+      </div>
+      <div class="svg-container">
+        <a
+          ><img
+            class="signup-form-fb-icon"
+            src="../../assets/fb-log.svg"
+            alt=""
+        /></a>
+        <a
+          ><img
+            class="signup-form-google-icon"
+            src="../../assets/google.svg"
+            alt=""
+        /></a>
+      </div>
+    </form>
+  </div>
+</mat-dialog-content>

@@ -20,7 +20,7 @@ export class ContactComponent implements OnInit {
     ]),
     phone: new FormControl('', [
       Validators.required,
-      Validators.pattern('^[0-9]*$'),
+      Validators.pattern('^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$'),
       Validators.minLength(8),
     ]),
     address: new FormControl(''),
@@ -30,9 +30,7 @@ export class ContactComponent implements OnInit {
 
   constructor(public http: ContactService) {}
 
-  ngOnInit() {
-    console.log(this.http.test);
-  }
+  ngOnInit() {}
 
   onSubmit() {}
 
@@ -56,6 +54,7 @@ export class ContactComponent implements OnInit {
       });
     }
   }
+
   phoneHandler(event) {
     if (event.key === 'e' || event.key === 'E') {
       event.preventDefault();

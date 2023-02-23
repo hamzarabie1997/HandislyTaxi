@@ -4,9 +4,9 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root',
 })
-export class ContactService {
+export class SignupFormService {
   constructor(private http: HttpClient) {}
-  sendEmail(url, data) {
+  signUp(url, data) {
     return this.http.post(url, data);
   }
 }

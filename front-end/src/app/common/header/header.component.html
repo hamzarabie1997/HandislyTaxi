@@ -1,11 +1,11 @@
 <div class="header-title">Handisly Taxi</div>
 <div class="header-login">
   <div class="login-icon-container">
-    <a
-      ><img class="login-icon" [routerLink]="'/signup'" src="../../../assets/login.svg" alt=""
+    <a (click)="openDialog()"
+      ><img class="login-icon" src="../../../assets/login.svg" alt=""
     /></a>
   </div>
-  <div><a class="login-text" [routerLink]="'/signup'">Log In</a></div>
+  <div><a class="login-text" (click)="openDialog()">Log In</a></div>
 </div>
 <div class="header-menu">
   <div

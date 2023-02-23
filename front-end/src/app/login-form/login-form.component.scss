@@ -1,0 +1,195 @@
+@import "./../../assets/variables.scss";
+
+////////// Start X Icon //////////
+.login-form-close-icon {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding-top: 35px;
+}
+
+.login-form-x-icon {
+  color: $text-color;
+  width: 30px;
+  height: 25px;
+  margin-right: 20px;
+}
+////////// End X Icon //////////
+
+//--------------------------------------//
+
+////////// Start Page Styles //////////
+.mat-dialog-content.login-form-dialog-content {
+  max-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-form-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+////////// End Page Styles //////////
+
+//--------------------------------------//
+
+////////// Start Upper Part Styles //////////
+.login-form-upper-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form-text {
+  color: $text-color;
+  font-family: $font-family;
+  font-size: 48px;
+  margin-bottom: 35px;
+}
+
+.login-form-question-container {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.login-form-question {
+  font-family: $font-family;
+  font-size: 18px;
+  margin-right: 5px;
+  color: $text-color;
+}
+
+.login-form-question-link {
+  font-family: $font-family;
+  font-size: 18px;
+  color: $text-color;
+  text-decoration: none;
+}
+////////// End Upper Part Styles //////////
+
+//--------------------------------------//
+
+////////// Start Form Styles //////////
+.login-form-fields-container {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+}
+.login-form-field-text {
+  z-index: 1;
+  color: $lime-color;
+  font-family: $font-family;
+  font-size: 18px;
+}
+.mat-form-field.login-form-input-field {
+  margin-top: -15px;
+  .mat-form-field-wrapper {
+    .mat-form-field-flex {
+      margin-left: -10.5px;
+      background-color: white;
+    }
+    .mat-form-field-underline::before {
+      background-color: $lime-color;
+    }
+    .mat-form-field-ripple {
+      height: 1px;
+      background-color: $text-color;
+    }
+    .mat-input-element {
+      caret-color: $text-color;
+      height: 20px;
+    }
+  }
+}
+////////// End Form Styles //////////
+
+//--------------------------------------//
+
+////////// Start Login button Styles //////////
+
+.mat-raised-button.login-form-submit-btn {
+  box-shadow: none !important;
+  .mat-button-ripple {
+    height: 0px;
+  }
+  background-color: $text-color;
+  border-radius: 0%;
+  font-size: 16px;
+  width: 100%;
+  height: 50px;
+  color: $lime-color;
+}
+
+.mat-raised-button.login-form-submit-btn.mat-primary:hover {
+  color: white;
+}
+
+////////// End Login button Styles //////////
+
+//--------------------------------------//
+
+////////// Start Forgot Link Styles //////////
+
+.login-form-forgot-container {
+  margin-top: 13px;
+  margin-bottom: 18px;
+}
+
+.login-form-forgot-link {
+  color: $text-color;
+  font-family: $font-family;
+  font-size: 16px;
+}
+
+.login-form-forgot-link:visited {
+  color: $text-color;
+}
+////////// End Forgot Link Styles //////////
+
+//--------------------------------------//
+
+////////// Start divider Styles //////////
+.login-form-or-divider {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 45px;
+  margin-bottom: 30px;
+}
+
+.mat-divider.login-form-lime-divider {
+  width: 100px;
+  background-color: $lime-color;
+}
+
+.login-form-or-text {
+  margin-right: 15px;
+  margin-left: 15px;
+  color: $text-color;
+  font-family: $font-family;
+  font-size: 16px;
+}
+////////// End divider Styles //////////
+
+//--------------------------------------//
+
+////////// Start Icons Styles //////////
+.svg-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.login-form-fb-icon {
+  margin-right: 15px;
+}
+.login-form-google-icon {
+  margin-left: 15px;
+}
+
+////////// End Icons Styles //////////

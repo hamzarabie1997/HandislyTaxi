@@ -1,1 +1,55 @@
-<p>login works!</p>
+<mat-dialog-content class="login-dialog-content">
+  <div class="login-close-icon">
+    <a class="login-x-icon" [mat-dialog-close]="true">
+      <mat-icon>close</mat-icon>
+    </a>
+  </div>
+  <div class="login-page-container">
+    <div class="login-page">
+      <div class="login-text">Log In</div>
+      <div class="login-question-container">
+        <div class="login-question">New to this site?</div>
+        <div class="login-question-button">
+          <a
+            class="login-question-link"
+            (click)="openDialog()"
+            [mat-dialog-close]="true"
+            >Sign Up</a
+          >
+        </div>
+      </div>
+      <div class="login-all-buttons">
+        <button
+          mat-raised-button
+          class="login-fb-btn"
+          href="facebook.cm"
+          color="primary"
+        >
+          <img class="login-fb-logo" src="../../assets/fb.svg" alt="" />
+          Log In with Facebook
+        </button>
+
+        <button mat-raised-button class="login-google-btn" color="primary">
+          <img class="login-google-logo" src="../../assets/google.svg" alt="" />
+          Log In with Google
+        </button>
+
+        <div class="login-or-divider">
+          <mat-divider class="login-lime-divider"></mat-divider>
+          <div class="login-or-text">or</div>
+          <mat-divider class="login-lime-divider"></mat-divider>
+        </div>
+
+        <button
+          mat-raised-button
+          class="login-email-btn"
+          color="primary"
+          (click)="openEmailDialog()"
+          [mat-dialog-close]="true"
+        >
+          Log In with Email
+        </button>
+      </div>
+    </div>
+  </div>
+</mat-dialog-content>
